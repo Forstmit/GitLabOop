@@ -1,10 +1,16 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using GitLabOop.Services;
 
 namespace GitLabOop.ViewModels;
 
-public partial class OneWayBindingsViewModel : ObservableObject
+public partial class OneWayBindingsViewModel : LocalizedViewModelBase
 {
+    public OneWayBindingsViewModel(ILocalizationService localization)
+        : base(localization)
+    {
+    }
+
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(SystemMessage))]
     [NotifyPropertyChangedFor(nameof(LevelCaption))]
@@ -19,12 +25,12 @@ public partial class OneWayBindingsViewModel : ObservableObject
 
     public string SystemMessage => TelemetryLevel switch
     {
-        < 35 => "Низкая загрузка. Интерфейс работает в спокойном режиме.",
-        < 70 => "Средняя загрузка. Значения приходят только из модели.",
-        _ => "Высокая загрузка. UI обновляется от источника, но не пишет обратно."
+        < 35 => T("OneWay_SystemMessageLow"),
+        < 70 => T("OneWay_SystemMessageMedium"),
+        _ => T("OneWay_SystemMessageHigh")
     };
 
-    public string LevelCaption => $"Текущее значение потока: {TelemetryLevel:F0}%";
+    public string LevelCaption => string.Format(T("OneWay_LevelCaption"), TelemetryLevel);
 
     [RelayCommand]
     private void AdvanceTelemetry()
@@ -35,5 +41,11 @@ public partial class OneWayBindingsViewModel : ObservableObject
             TelemetryLevel = 16;
             HasSync = !HasSync;
         }
+    }
+
+    protected override void OnLanguageChanged()
+    {
+        OnPropertyChanged(nameof(SystemMessage));
+        OnPropertyChanged(nameof(LevelCaption));
     }
 }

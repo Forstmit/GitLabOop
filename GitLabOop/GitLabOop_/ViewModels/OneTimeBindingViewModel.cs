@@ -1,13 +1,20 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using GitLabOop.Models;
+using GitLabOop.Services;
 
 namespace GitLabOop.ViewModels;
 
-public partial class OneTimeBindingViewModel : ObservableObject
+public partial class OneTimeBindingViewModel : LocalizedViewModelBase
 {
+    public OneTimeBindingViewModel(ILocalizationService localization)
+        : base(localization)
+    {
+        snapshot = CreateSnapshot();
+    }
+
     [ObservableProperty]
-    private string draftTitle = "Прототип отчёта";
+    private string draftTitle = "Прототип отчета";
 
     [ObservableProperty]
     private string draftComment = "Снимок фиксирует состояние только в момент создания.";
@@ -17,11 +24,6 @@ public partial class OneTimeBindingViewModel : ObservableObject
 
     [ObservableProperty]
     private BindingSampleModel snapshot;
-
-    public OneTimeBindingViewModel()
-    {
-        snapshot = CreateSnapshot();
-    }
 
     [RelayCommand]
     private void RefreshSnapshot()

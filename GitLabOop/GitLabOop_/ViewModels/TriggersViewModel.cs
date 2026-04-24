@@ -1,10 +1,16 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using GitLabOop.Services;
 
 namespace GitLabOop.ViewModels;
 
-public partial class TriggersViewModel : ObservableObject
+public partial class TriggersViewModel : LocalizedViewModelBase
 {
+    public TriggersViewModel(ILocalizationService localization)
+        : base(localization)
+    {
+    }
+
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(CurrentState))]
     private bool isOnline = true;
@@ -17,7 +23,12 @@ public partial class TriggersViewModel : ObservableObject
     [NotifyPropertyChangedFor(nameof(CurrentState))]
     private bool hasWarnings;
 
-    public string CurrentState => $"Online: {(IsOnline ? "Да" : "Нет")} | Priority: {(IsPriorityMode ? "Да" : "Нет")} | Warnings: {(HasWarnings ? "Да" : "Нет")}";
+    public string CurrentState =>
+        string.Format(
+            T("Triggers_CurrentState"),
+            T(IsOnline ? "Common_Yes" : "Common_No"),
+            T(IsPriorityMode ? "Common_Yes" : "Common_No"),
+            T(HasWarnings ? "Common_Yes" : "Common_No"));
 
     [RelayCommand]
     private void ToggleOnline()
@@ -43,5 +54,10 @@ public partial class TriggersViewModel : ObservableObject
         IsOnline = true;
         IsPriorityMode = false;
         HasWarnings = false;
+    }
+
+    protected override void OnLanguageChanged()
+    {
+        OnPropertyChanged(nameof(CurrentState));
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:views="clr-namespace:GitLabOop.Views"
         mc:Ignorable="d"
-        Title="ЛР 1. Демонстрация привязок и триггеров"
+        Title="{Binding Source={StaticResource Loc}, Path=[MainWindow_Title]}"
         Width="1280"
         Height="900"
         MinWidth="1100"
@@ -22,29 +22,53 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="370" />
                 </Grid.ColumnDefinitions>
 
-                <StackPanel>
-                    <TextBlock Text="Лабораторная работа №1"
+                <StackPanel Margin="0,0,28,0">
+                    <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[MainWindow_HeroTitle]}"
                                Style="{StaticResource HeroTitleStyle}" />
                     <TextBlock Margin="0,8,0,0"
-                               Text="WPF-приложение показывает режимы привязки данных, различия между прямой привязкой к элементам интерфейса и работой через ViewModel, а также разные типы триггеров."
+                               Text="{Binding Source={StaticResource Loc}, Path=[MainWindow_HeroSubtitle]}"
                                Style="{StaticResource HeroSubtitleStyle}" />
+
+                    <Border Margin="0,18,0,0"
+                            Padding="16,10"
+                            HorizontalAlignment="Left"
+                            Background="#1FFFFFFF"
+                            CornerRadius="18">
+                        <StackPanel>
+                            <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[MainWindow_ApproachLabel]}"
+                                       Style="{StaticResource MutedCaptionStyle}" />
+                            <TextBlock Margin="0,4,0,0"
+                                       Text="{Binding Source={StaticResource Loc}, Path=[MainWindow_ApproachValue]}"
+                                       Style="{StaticResource BadgeValueStyle}" />
+                        </StackPanel>
+                    </Border>
                 </StackPanel>
 
                 <Border Grid.Column="1"
-                        Padding="16,10"
-                        Margin="24,0,0,0"
-                        VerticalAlignment="Center"
-                        Background="#1FFFFFFF"
-                        CornerRadius="18">
+                        Padding="22"
+                        Background="#16FFFFFF"
+                        CornerRadius="24">
                     <StackPanel>
-                        <TextBlock Text="Подход"
-                                   Style="{StaticResource MutedCaptionStyle}" />
-                        <TextBlock Margin="0,4,0,0"
-                                   Text="Ручная MVVM-реализация"
-                                   Style="{StaticResource BadgeValueStyle}" />
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[MainWindow_LanguageLabel]}"
+                                   Style="{StaticResource HeroFormLabelStyle}" />
+                        <ComboBox ItemsSource="{Binding SupportedLanguages}"
+                                  SelectedItem="{Binding SelectedLanguage}"
+                                  DisplayMemberPath="DisplayName"
+                                  Style="{StaticResource HeroComboBoxStyle}" />
+
+                        <Border Margin="0,14,0,0"
+                                Style="{StaticResource HeroInfoBadgeStyle}">
+                            <TextBlock Text="{Binding CurrentLanguageCaption}"
+                                       Style="{StaticResource HeroInfoTextStyle}" />
+                        </Border>
+
+                        <Button Margin="0,16,0,0"
+                                Content="{Binding Source={StaticResource Loc}, Path=[MainWindow_ShowMessage]}"
+                                Command="{Binding ShowLocalizedMessageCommand}"
+                                Style="{StaticResource AccentButtonStyle}" />
                     </StackPanel>
                 </Border>
             </Grid>
@@ -54,19 +78,19 @@
                 Margin="0,18,0,0"
                 Style="{StaticResource ShellPanelStyle}">
             <TabControl Style="{StaticResource ShowcaseTabControlStyle}">
-                <TabItem Header="Привязка по умолчанию">
+                <TabItem Header="{Binding Source={StaticResource Loc}, Path=[MainWindow_Tab_Default]}">
                     <views:DefaultBindingView DataContext="{Binding DefaultBinding}" />
                 </TabItem>
-                <TabItem Header="Двухсторонняя привязка">
+                <TabItem Header="{Binding Source={StaticResource Loc}, Path=[MainWindow_Tab_TwoWay]}">
                     <views:TwoWayBindingView DataContext="{Binding TwoWayBinding}" />
                 </TabItem>
-                <TabItem Header="Одноразовая привязка">
+                <TabItem Header="{Binding Source={StaticResource Loc}, Path=[MainWindow_Tab_OneTime]}">
                     <views:OneTimeBindingView DataContext="{Binding OneTimeBinding}" />
                 </TabItem>
-                <TabItem Header="Односторонние привязки">
+                <TabItem Header="{Binding Source={StaticResource Loc}, Path=[MainWindow_Tab_OneWay]}">
                     <views:OneWayBindingsView DataContext="{Binding OneWayBindings}" />
                 </TabItem>
-                <TabItem Header="Триггеры">
+                <TabItem Header="{Binding Source={StaticResource Loc}, Path=[MainWindow_Tab_Triggers]}">
                     <views:TriggersView DataContext="{Binding Triggers}" />
                 </TabItem>
             </TabControl>
