@@ -1,9 +1,15 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using GitLabOop.Services;
 
 namespace GitLabOop.ViewModels;
 
-public partial class DefaultBindingViewModel : ObservableObject
+public partial class DefaultBindingViewModel : LocalizedViewModelBase
 {
+    public DefaultBindingViewModel(ILocalizationService localization)
+        : base(localization)
+    {
+    }
+
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Summary))]
     private string presenterName = "Утренний бриф команды";
@@ -22,5 +28,11 @@ public partial class DefaultBindingViewModel : ObservableObject
 
     public double AccentOpacityRatio => AccentOpacity / 100.0;
 
-    public string Summary => $"{PresenterName} | Прозрачность акцента: {AccentOpacity:F0}% | Закреплено: {(IsPinned ? "Да" : "Нет")}";
+    public string Summary =>
+        string.Format(T("Default_Summary"), PresenterName, AccentOpacity, T(IsPinned ? "Common_Yes" : "Common_No"));
+
+    protected override void OnLanguageChanged()
+    {
+        OnPropertyChanged(nameof(Summary));
+    }
 }

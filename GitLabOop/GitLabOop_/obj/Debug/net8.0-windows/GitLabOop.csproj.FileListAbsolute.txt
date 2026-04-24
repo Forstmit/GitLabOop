@@ -1,4 +1,3 @@
-C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\Rsources\Theme.baml
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\Views\DefaultBindingView.baml
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\Views\OneTimeBindingView.baml
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\Views\OneWayBindingsView.baml
@@ -36,3 +35,8 @@ C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\GitLabOop.genruntimeconfig.cache
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\ref\GitLabOop.dll
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\Resources\Theme.baml
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\bin\Debug\net8.0-windows\CodingSeb.Localization.dll
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\bin\Debug\net8.0-windows\CodingSeb.Localization.JsonFileLoader.dll
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\bin\Debug\net8.0-windows\CodingSeb.Localization.WPF.dll
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\bin\Debug\net8.0-windows\Localization\Strings.loc.json

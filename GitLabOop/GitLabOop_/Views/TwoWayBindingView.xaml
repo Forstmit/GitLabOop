@@ -8,10 +8,10 @@
         <StackPanel Margin="8">
             <Border Style="{StaticResource SurfaceCardStyle}">
                 <StackPanel>
-                    <TextBlock Text="Как работает TwoWay"
+                    <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_Header]}"
                                Style="{StaticResource SectionTitleStyle}" />
                     <TextBlock Margin="0,10,0,0"
-                               Text="При двухсторонней привязке целевой элемент не только получает данные от источника, но и отправляет изменения обратно."
+                               Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_Description]}"
                                Style="{StaticResource InfoTextStyle}" />
                 </StackPanel>
             </Border>
@@ -26,22 +26,22 @@
                         Margin="0,0,10,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Прямая двухсторонняя привязка"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_DirectCardTitle]}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Элементы синхронизируются напрямую через ElementName и явный Mode=TwoWay."
+                                   Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_DirectCardDescription]}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="Основной текст"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_MainTextLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox x:Name="DirectTwoWaySourceText"
                                  Text="Синхронный ввод" />
 
-                        <TextBlock Text="Зеркальный TextBox"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_MirrorTextLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding ElementName=DirectTwoWaySourceText, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBlock Text="Источник: Slider"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_SliderSourceLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider x:Name="DirectTwoWaySlider"
                                 Minimum="0"
@@ -49,14 +49,14 @@
                                 TickFrequency="5000"
                                 Value="35000" />
 
-                        <TextBlock Text="TextBox редактирует тот же источник"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_EditSourceLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding ElementName=DirectTwoWaySlider, Path=Value, Mode=TwoWay, UpdateSourceTrigger=LostFocus, StringFormat={}{0:F0}}" />
 
                         <CheckBox x:Name="DirectTwoWayCheckBox"
-                                  Content="Флаг отправки включён"
+                                  Content="{Binding Source={StaticResource Loc}, Path=[TwoWay_CheckboxContent]}"
                                   IsChecked="True" />
-                        <ToggleButton Content="Повторяет состояние CheckBox"
+                        <ToggleButton Content="{Binding Source={StaticResource Loc}, Path=[TwoWay_ToggleContent]}"
                                       IsChecked="{Binding ElementName=DirectTwoWayCheckBox, Path=IsChecked, Mode=TwoWay}" />
                     </StackPanel>
                 </Border>
@@ -65,28 +65,28 @@
                         Margin="10,0,0,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="TwoWay через ViewModel"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_ViewModelCardTitle]}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Все элементы пишут и читают одни и те же свойства ViewModel."
+                                   Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_ViewModelCardDescription]}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="ФИО"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_FullNameLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding FullName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBlock Text="Комментарий"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_FeedbackLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding Feedback, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBlock Text="Бюджет"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[TwoWay_BudgetLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider Minimum="0"
                                 Maximum="100000"
                                 Value="{Binding Budget, Mode=TwoWay}" />
                         <TextBox Text="{Binding Budget, Mode=TwoWay, UpdateSourceTrigger=LostFocus, StringFormat={}{0:F0}}" />
 
-                        <CheckBox Content="Включить push-уведомления"
+                        <CheckBox Content="{Binding Source={StaticResource Loc}, Path=[TwoWay_PushCheckbox]}"
                                   IsChecked="{Binding PushEnabled, Mode=TwoWay}" />
 
                         <Border Margin="0,8,0,0"

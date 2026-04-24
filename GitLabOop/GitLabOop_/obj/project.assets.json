@@ -2,6 +2,55 @@
   "version": 3,
   "targets": {
     "net8.0-windows7.0": {
+      "CodingSeb.Localization/1.4.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/CodingSeb.Localization.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/CodingSeb.Localization.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "CodingSeb.Localization.JsonFileLoader/1.4.0": {
+        "type": "package",
+        "dependencies": {
+          "CodingSeb.Localization": "1.4.0",
+          "Newtonsoft.Json": "13.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/CodingSeb.Localization.JsonFileLoader.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/CodingSeb.Localization.JsonFileLoader.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "CodingSeb.Localization.WPF/1.4.1": {
+        "type": "package",
+        "dependencies": {
+          "CodingSeb.Localization": "1.4.0"
+        },
+        "compile": {
+          "lib/net8.0-windows7.0/CodingSeb.Localization.WPF.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows7.0/CodingSeb.Localization.WPF.dll": {
+            "related": ".pdb"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
+      },
       "CommunityToolkit.Mvvm/8.4.0": {
         "type": "package",
         "compile": {
@@ -17,10 +66,78 @@
         "build": {
           "buildTransitive/CommunityToolkit.Mvvm.targets": {}
         }
+      },
+      "Newtonsoft.Json/13.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Newtonsoft.Json.dll": {
+            "related": ".xml"
+          }
+        }
       }
     }
   },
   "libraries": {
+    "CodingSeb.Localization/1.4.0": {
+      "sha512": "XcBrJWcSF90hMqR593pkvx7Z0TGLk653aZ24+N/4KOqZ70Mm2jbno/nDf7uoGNjGtmFC0EGmhM5WHISLuNYTQw==",
+      "type": "package",
+      "path": "codingseb.localization/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "codingseb.localization.1.4.0.nupkg.sha512",
+        "codingseb.localization.nuspec",
+        "lib/net6.0/CodingSeb.Localization.dll",
+        "lib/net6.0/CodingSeb.Localization.pdb",
+        "lib/net8.0/CodingSeb.Localization.dll",
+        "lib/net8.0/CodingSeb.Localization.pdb",
+        "lib/netstandard2.0/CodingSeb.Localization.dll",
+        "lib/netstandard2.0/CodingSeb.Localization.pdb"
+      ]
+    },
+    "CodingSeb.Localization.JsonFileLoader/1.4.0": {
+      "sha512": "gBtzkXDf9mbzO5ywal2COsAezOXT+HgAljYb1THwyik7ejZK7bDlHSTKZbbqiOqJ3ZbG2KL6o00ltKRrrbyF4A==",
+      "type": "package",
+      "path": "codingseb.localization.jsonfileloader/1.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "codingseb.localization.jsonfileloader.1.4.0.nupkg.sha512",
+        "codingseb.localization.jsonfileloader.nuspec",
+        "lib/netstandard2.0/CodingSeb.Localization.JsonFileLoader.dll",
+        "lib/netstandard2.0/CodingSeb.Localization.JsonFileLoader.pdb"
+      ]
+    },
+    "CodingSeb.Localization.WPF/1.4.1": {
+      "sha512": "WNCjwQa5xHit/w2SU6/1Lq+4KSbZqv1h7I/n25883l4IxRhhqOYQ05HeLoJuQiypK40j93GDfMDgASXFbch+sw==",
+      "type": "package",
+      "path": "codingseb.localization.wpf/1.4.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "codingseb.localization.wpf.1.4.1.nupkg.sha512",
+        "codingseb.localization.wpf.nuspec",
+        "lib/net462/CodingSeb.Localization.WPF.dll",
+        "lib/net462/CodingSeb.Localization.WPF.pdb",
+        "lib/net6.0-windows7.0/CodingSeb.Localization.WPF.dll",
+        "lib/net6.0-windows7.0/CodingSeb.Localization.WPF.pdb",
+        "lib/net8.0-windows7.0/CodingSeb.Localization.WPF.dll",
+        "lib/net8.0-windows7.0/CodingSeb.Localization.WPF.pdb",
+        "lib/netcoreapp3.1/CodingSeb.Localization.WPF.dll",
+        "lib/netcoreapp3.1/CodingSeb.Localization.WPF.pdb"
+      ]
+    },
     "CommunityToolkit.Mvvm/8.4.0": {
       "sha512": "tqVU8yc/ADO9oiTRyTnwhFN68hCwvkliMierptWOudIAvWY1mWCh5VFh+guwHJmpMwfg0J0rY+yyd5Oy7ty9Uw==",
       "type": "package",
@@ -62,10 +179,43 @@
         "lib/netstandard2.1/CommunityToolkit.Mvvm.pdb",
         "lib/netstandard2.1/CommunityToolkit.Mvvm.xml"
       ]
+    },
+    "Newtonsoft.Json/13.0.3": {
+      "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
+      "type": "package",
+      "path": "newtonsoft.json/13.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "README.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/net6.0/Newtonsoft.Json.dll",
+        "lib/net6.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "newtonsoft.json.13.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0-windows7.0": [
+      "CodingSeb.Localization >= 1.4.0",
+      "CodingSeb.Localization.JsonFileLoader >= 1.4.0",
+      "CodingSeb.Localization.WPF >= 1.4.1",
       "CommunityToolkit.Mvvm >= 8.4.0"
     ]
   },
@@ -119,6 +269,18 @@
       "net8.0-windows7.0": {
         "targetAlias": "net8.0-windows",
         "dependencies": {
+          "CodingSeb.Localization": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
+          "CodingSeb.Localization.JsonFileLoader": {
+            "target": "Package",
+            "version": "[1.4.0, )"
+          },
+          "CodingSeb.Localization.WPF": {
+            "target": "Package",
+            "version": "[1.4.1, )"
+          },
           "CommunityToolkit.Mvvm": {
             "target": "Package",
             "version": "[8.4.0, )"
