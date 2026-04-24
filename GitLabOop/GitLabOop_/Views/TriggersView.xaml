@@ -3,27 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:services="clr-namespace:GitLabOop.Services"
              mc:Ignorable="d">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="8">
             <Border Style="{StaticResource SurfaceCardStyle}">
                 <StackPanel>
-                    <TextBlock Text="Разница между триггерами"
+                    <TextBlock Text="{services:Loc TriggersSectionTitle}"
                                Style="{StaticResource SectionTitleStyle}" />
                     <TextBlock Margin="0,10,0,12"
-                               Text="Триггеры позволяют менять внешний вид и поведение элемента без code-behind: обычный Trigger реагирует на свойства самого элемента, DataTrigger — на данные, MultiTrigger и MultiDataTrigger — на сочетание условий, EventTrigger — на событие."
+                               Text="{services:Loc TriggersSectionDescription}"
                                Style="{StaticResource InfoTextStyle}" />
                     <WrapPanel>
-                        <Button Content="Toggle Online"
+                        <Button Content="{services:Loc TriggersToggleOnlineButton}"
                                 Style="{StaticResource AccentButtonStyle}"
                                 Command="{Binding ToggleOnlineCommand}" />
-                        <Button Content="Toggle Priority"
+                        <Button Content="{services:Loc TriggersTogglePriorityButton}"
                                 Style="{StaticResource GhostButtonStyle}"
                                 Command="{Binding TogglePriorityCommand}" />
-                        <Button Content="Toggle Warnings"
+                        <Button Content="{services:Loc TriggersToggleWarningsButton}"
                                 Style="{StaticResource GhostButtonStyle}"
                                 Command="{Binding ToggleWarningsCommand}" />
-                        <Button Content="Reset"
+                        <Button Content="{services:Loc TriggersResetButton}"
                                 Style="{StaticResource GhostButtonStyle}"
                                 Command="{Binding ResetCommand}" />
                     </WrapPanel>
@@ -39,12 +40,12 @@
                 <Border Margin="0,0,10,18"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Trigger"
+                        <TextBlock Text="{services:Loc TriggerCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,16"
-                                   Text="Обычный Trigger следит за свойством самого элемента. Наведи курсор и нажми кнопку."
+                                   Text="{services:Loc TriggerCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
-                        <Button Content="Hover / Press me"
+                        <Button Content="{services:Loc TriggerDemoButton}"
                                 Padding="18,14"
                                 Background="#E2E8F0"
                                 BorderThickness="0">
@@ -81,10 +82,10 @@
                 <Border Margin="10,0,0,18"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="DataTrigger"
+                        <TextBlock Text="{services:Loc DataTriggerCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,16"
-                                   Text="DataTrigger меняет оформление по значению свойства во ViewModel."
+                                   Text="{services:Loc DataTriggerCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
                         <Border Padding="16"
                                 CornerRadius="18"
@@ -99,7 +100,7 @@
                                     </Style.Triggers>
                                 </Style>
                             </Border.Style>
-                            <TextBlock Text="Режим приоритета"
+                            <TextBlock Text="{services:Loc DataTriggerPriorityLabel}"
                                        FontWeight="SemiBold">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
@@ -119,12 +120,12 @@
                 <Border Margin="0,0,10,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="MultiTrigger"
+                        <TextBlock Text="{services:Loc MultiTriggerCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,16"
-                                   Text="MultiTrigger учитывает сразу несколько свойств самого элемента."
+                                   Text="{services:Loc MultiTriggerCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
-                        <Button Content="Hover and Press"
+                        <Button Content="{services:Loc MultiTriggerDemoButton}"
                                 Padding="18,14"
                                 Background="#E2E8F0"
                                 BorderThickness="0">
@@ -162,10 +163,10 @@
                 <Border Margin="10,0,0,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="MultiDataTrigger + EventTrigger"
+                        <TextBlock Text="{services:Loc MultiDataTriggerCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,16"
-                                   Text="MultiDataTrigger реагирует на набор условий из данных. EventTrigger ниже запускает анимацию при загрузке."
+                                   Text="{services:Loc MultiDataTriggerCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
 
                         <Border Padding="16"
@@ -205,7 +206,7 @@
                                     </BeginStoryboard>
                                 </EventTrigger>
                             </Border.Triggers>
-                            <TextBlock Text="Комбинированное состояние"
+                            <TextBlock Text="{services:Loc MultiDataTriggerCombinedStateLabel}"
                                        FontWeight="SemiBold" />
                         </Border>
                     </StackPanel>

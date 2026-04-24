@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:services="clr-namespace:GitLabOop.Services"
              mc:Ignorable="d">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="8">
             <Border Style="{StaticResource SurfaceCardStyle}">
                 <StackPanel>
-                    <TextBlock Text="Как работает OneTime"
+                    <TextBlock Text="{services:Loc OneTimeSectionTitle}"
                                Style="{StaticResource SectionTitleStyle}" />
                     <TextBlock Margin="0,10,0,0"
-                               Text="Одноразовая привязка берёт значение только один раз в момент создания привязки или смены источника. Поздние изменения в источнике автоматически в UI не попадают."
+                               Text="{services:Loc OneTimeSectionDescription}"
                                Style="{StaticResource InfoTextStyle}" />
                 </StackPanel>
             </Border>
@@ -26,18 +27,17 @@
                         Margin="0,0,10,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Прямая одноразовая привязка"
+                        <TextBlock Text="{services:Loc OneTimeDirectCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Target запоминает состояние исходного элемента и больше не обновляется, пока привязка не будет пересоздана."
+                                   Text="{services:Loc OneTimeDirectCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="Источник: TextBox"
+                        <TextBlock Text="{services:Loc OneTimeDirectTextSourceLabel}"
                                    Style="{StaticResource InputLabelStyle}" />
-                        <TextBox x:Name="DirectOneTimeText"
-                                 Text="Снимок текста при загрузке" />
+                        <TextBox x:Name="DirectOneTimeText" />
 
-                        <TextBlock Text="Источник: Slider"
+                        <TextBlock Text="{services:Loc OneTimeDirectSliderSourceLabel}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider x:Name="DirectOneTimeSlider"
                                 Minimum="0"
@@ -46,7 +46,7 @@
 
                         <Border Style="{StaticResource SummaryBadgeStyle}">
                             <StackPanel>
-                                <TextBlock Text="Снимок OneTime"
+                                <TextBlock Text="{services:Loc OneTimeDirectSnapshotTitle}"
                                            Style="{StaticResource InputLabelStyle}" />
                                 <TextBlock Text="{Binding ElementName=DirectOneTimeText, Path=Text, Mode=OneTime}"
                                            Style="{StaticResource InfoTextStyle}" />
@@ -62,29 +62,33 @@
                         Margin="10,0,0,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="OneTime через ViewModel"
+                        <TextBlock Text="{services:Loc OneTimeViewModelCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Слева изменяются текущие данные, а карточка ниже получает их только после пересоздания снимка."
+                                   Text="{services:Loc OneTimeViewModelCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="Черновой заголовок"
+                        <TextBlock Text="{services:Loc OneTimeDraftTitleLabel}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding DraftTitle, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBlock Text="Черновой комментарий"
+                        <TextBlock Text="{services:Loc OneTimeDraftCommentLabel}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding DraftComment, UpdateSourceTrigger=PropertyChanged}" />
 
-                        <TextBlock Text="Прогресс"
+                        <TextBlock Text="{services:Loc OneTimeProgressLabel}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider Minimum="0"
                                 Maximum="100"
                                 Value="{Binding DraftProgress}" />
 
-                        <Button Content="Обновить снимок"
+                        <Button Content="{services:Loc OneTimeRefreshButton}"
                                 Style="{StaticResource AccentButtonStyle}"
                                 Command="{Binding RefreshSnapshotCommand}" />
+
+                        <TextBlock Margin="0,12,0,0"
+                                   Text="{Binding LastActionMessage}"
+                                   Style="{StaticResource InfoTextStyle}" />
 
                         <ContentControl Margin="0,8,0,0"
                                         Content="{Binding Snapshot}">
@@ -92,7 +96,7 @@
                                 <DataTemplate>
                                     <Border Style="{StaticResource SummaryBadgeStyle}">
                                         <StackPanel>
-                                            <TextBlock Text="Снимок ViewModel"
+                                            <TextBlock Text="{services:Loc OneTimeViewModelSnapshotTitle}"
                                                        Style="{StaticResource InputLabelStyle}" />
                                             <TextBlock Text="{Binding PrimaryText, Mode=OneTime}"
                                                        Style="{StaticResource InfoTextStyle}" />

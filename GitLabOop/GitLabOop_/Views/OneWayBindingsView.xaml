@@ -3,15 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:services="clr-namespace:GitLabOop.Services"
              mc:Ignorable="d">
     <ScrollViewer VerticalScrollBarVisibility="Auto">
         <StackPanel Margin="8">
             <Border Style="{StaticResource SurfaceCardStyle}">
                 <StackPanel>
-                    <TextBlock Text="Как работают односторонние привязки"
+                    <TextBlock Text="{services:Loc OneWaySectionTitle}"
                                Style="{StaticResource SectionTitleStyle}" />
                     <TextBlock Margin="0,10,0,0"
-                               Text="OneWay обновляет только цель из источника, а OneWayToSource работает наоборот: изменения уходят в источник, но исходное значение в контрол не подставляется."
+                               Text="{services:Loc OneWaySectionDescription}"
                                Style="{StaticResource InfoTextStyle}" />
                 </StackPanel>
             </Border>
@@ -26,13 +27,13 @@
                         Margin="0,0,10,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Прямые OneWay и OneWayToSource"
+                        <TextBlock Text="{services:Loc OneWayDirectCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Слева источник и приёмник связаны напрямую через ElementName без участия ViewModel."
+                                   Text="{services:Loc OneWayDirectCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="Источник для OneWay"
+                        <TextBlock Text="{services:Loc OneWayDirectSourceLabel}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider x:Name="DirectOneWaySlider"
                                 Minimum="0"
@@ -46,12 +47,11 @@
 
                         <Border x:Name="DirectSourceStorage"
                                 Margin="0,10,0,0"
-                                Tag="Хранилище ещё не получало текст"
                                 Padding="14"
                                 CornerRadius="14"
                                 Background="{StaticResource AccentSoftBrush}">
                             <StackPanel>
-                                <TextBlock Text="TextBox пишет в Border.Tag через OneWayToSource"
+                                <TextBlock Text="{services:Loc OneWayDirectStorageTitle}"
                                            Style="{StaticResource InputLabelStyle}" />
                                 <TextBox Text="{Binding ElementName=DirectSourceStorage, Path=Tag, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
                                 <TextBlock Text="{Binding ElementName=DirectSourceStorage, Path=Tag}"
@@ -65,13 +65,13 @@
                         Margin="10,0,0,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Односторонние режимы через ViewModel"
+                        <TextBlock Text="{services:Loc OneWayViewModelCardTitle}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Кнопка меняет источник во ViewModel, а элементы только читают его. Ниже TextBox с OneWayToSource отправляет текст в модель, оставаясь пустым при начальном значении."
+                                   Text="{services:Loc OneWayViewModelCardDescription}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <Button Content="Изменить телеметрию"
+                        <Button Content="{services:Loc OneWayAdvanceTelemetryButton}"
                                 Style="{StaticResource AccentButtonStyle}"
                                 Command="{Binding AdvanceTelemetryCommand}" />
 
@@ -83,14 +83,14 @@
                         <TextBlock Margin="0,8,0,0"
                                    Text="{Binding SystemMessage, Mode=OneWay}"
                                    Style="{StaticResource InfoTextStyle}" />
-                        <CheckBox Content="Синхронизация активна"
+                        <CheckBox Content="{services:Loc OneWaySyncCheckbox}"
                                   IsChecked="{Binding HasSync, Mode=OneWay}"
                                   IsEnabled="False" />
 
                         <Border Margin="0,14,0,0"
                                 Style="{StaticResource SummaryBadgeStyle}">
                             <StackPanel>
-                                <TextBlock Text="OneWayToSource в ViewModel"
+                                <TextBlock Text="{services:Loc OneWayToSourceTitle}"
                                            Style="{StaticResource InputLabelStyle}" />
                                 <TextBox Text="{Binding NotesToSource, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
                                 <TextBlock Text="{Binding NotesToSource}"

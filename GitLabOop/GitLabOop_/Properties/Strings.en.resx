@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>Lab 1. Binding and Trigger Showcase</value>
+  </data>
+  <data name="HeroTitle" xml:space="preserve">
+    <value>Laboratory Work No. 1</value>
+  </data>
+  <data name="HeroSubtitle" xml:space="preserve">
+    <value>The WPF application demonstrates binding modes, the difference between direct bindings to UI elements and bindings through a ViewModel, as well as different trigger types.</value>
+  </data>
+  <data name="HeroApproachLabel" xml:space="preserve">
+    <value>Approach</value>
+  </data>
+  <data name="HeroApproachValue" xml:space="preserve">
+    <value>Manual MVVM implementation</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Interface language</value>
+  </data>
+  <data name="LanguageOptionRussian" xml:space="preserve">
+    <value>Russian</value>
+  </data>
+  <data name="LanguageOptionEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="TabDefaultBinding" xml:space="preserve">
+    <value>Default binding</value>
+  </data>
+  <data name="TabTwoWayBinding" xml:space="preserve">
+    <value>Two-way binding</value>
+  </data>
+  <data name="TabOneTimeBinding" xml:space="preserve">
+    <value>One-time binding</value>
+  </data>
+  <data name="TabOneWayBindings" xml:space="preserve">
+    <value>One-way bindings</value>
+  </data>
+  <data name="TabTriggers" xml:space="preserve">
+    <value>Triggers</value>
+  </data>
+  <data name="CommonYes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CommonNo" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="DefaultSectionTitle" xml:space="preserve">
+    <value>How Default mode works</value>
+  </data>
+  <data name="DefaultSectionDescription" xml:space="preserve">
+    <value>If Mode is not specified, WPF uses the target property's default mode. For TextBox.Text and CheckBox.IsChecked this is usually two-way binding, while for TextBlock.Text or Opacity it is one-way.</value>
+  </data>
+  <data name="DefaultDirectCardTitle" xml:space="preserve">
+    <value>Direct binding to UI elements</value>
+  </data>
+  <data name="DefaultDirectCardDescription" xml:space="preserve">
+    <value>TextBox gets two-way behavior by default, while TextBlock and ProgressBar simply read the Slider value.</value>
+  </data>
+  <data name="DefaultDirectSourceSliderLabel" xml:space="preserve">
+    <value>Source: Slider.Value</value>
+  </data>
+  <data name="DefaultDirectTextBoxLabel" xml:space="preserve">
+    <value>TextBox (Mode not set)</value>
+  </data>
+  <data name="DefaultDirectTextBlockLabel" xml:space="preserve">
+    <value>TextBlock (Mode not set)</value>
+  </data>
+  <data name="DefaultDirectProgressBarLabel" xml:space="preserve">
+    <value>ProgressBar reads the same value</value>
+  </data>
+  <data name="DefaultViewModelCardTitle" xml:space="preserve">
+    <value>Binding through ViewModel</value>
+  </data>
+  <data name="DefaultViewModelCardDescription" xml:space="preserve">
+    <value>Here the target elements no longer communicate with each other directly and instead work through ViewModel properties.</value>
+  </data>
+  <data name="DefaultPresenterNameLabel" xml:space="preserve">
+    <value>Block title</value>
+  </data>
+  <data name="DefaultNotesLabel" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="DefaultPinCardCheckbox" xml:space="preserve">
+    <value>Pin the card</value>
+  </data>
+  <data name="DefaultAccentOpacityLabel" xml:space="preserve">
+    <value>Accent opacity</value>
+  </data>
+  <data name="DefaultBindingPresenterNameInitial" xml:space="preserve">
+    <value>Morning team briefing</value>
+  </data>
+  <data name="DefaultBindingNotesInitial" xml:space="preserve">
+    <value>Changes in TextBox and CheckBox are pushed back to the model without explicitly setting the mode.</value>
+  </data>
+  <data name="DefaultBindingSummaryFormat" xml:space="preserve">
+    <value>{0} | Accent opacity: {1:F0}% | Pinned: {2}</value>
+  </data>
+  <data name="TwoWaySectionTitle" xml:space="preserve">
+    <value>How TwoWay works</value>
+  </data>
+  <data name="TwoWaySectionDescription" xml:space="preserve">
+    <value>With two-way binding the target element not only receives data from the source but also sends changes back to it.</value>
+  </data>
+  <data name="TwoWayDirectCardTitle" xml:space="preserve">
+    <value>Direct two-way binding</value>
+  </data>
+  <data name="TwoWayDirectCardDescription" xml:space="preserve">
+    <value>Elements stay synchronized directly through ElementName and explicit Mode=TwoWay.</value>
+  </data>
+  <data name="TwoWayDirectPrimaryTextLabel" xml:space="preserve">
+    <value>Primary text</value>
+  </data>
+  <data name="TwoWayDirectMirrorTextLabel" xml:space="preserve">
+    <value>Mirror TextBox</value>
+  </data>
+  <data name="TwoWayDirectSliderSourceLabel" xml:space="preserve">
+    <value>Source: Slider</value>
+  </data>
+  <data name="TwoWayDirectBudgetTextLabel" xml:space="preserve">
+    <value>TextBox edits the same source</value>
+  </data>
+  <data name="TwoWayDirectPushCheckbox" xml:space="preserve">
+    <value>Send flag is enabled</value>
+  </data>
+  <data name="TwoWayDirectToggleButton" xml:space="preserve">
+    <value>Mirrors CheckBox state</value>
+  </data>
+  <data name="TwoWayDirectSourceTextInitial" xml:space="preserve">
+    <value>Synchronized input</value>
+  </data>
+  <data name="TwoWayViewModelCardTitle" xml:space="preserve">
+    <value>TwoWay through ViewModel</value>
+  </data>
+  <data name="TwoWayViewModelCardDescription" xml:space="preserve">
+    <value>All elements write to and read from the same ViewModel properties.</value>
+  </data>
+  <data name="TwoWayFullNameLabel" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="TwoWayFeedbackLabel" xml:space="preserve">
+    <value>Comment</value>
+  </data>
+  <data name="TwoWayBudgetLabel" xml:space="preserve">
+    <value>Budget</value>
+  </data>
+  <data name="TwoWayPushCheckbox" xml:space="preserve">
+    <value>Enable push notifications</value>
+  </data>
+  <data name="TwoWayFullNameInitial" xml:space="preserve">
+    <value>John Smith</value>
+  </data>
+  <data name="TwoWayFeedbackInitial" xml:space="preserve">
+    <value>Request confirmed</value>
+  </data>
+  <data name="TwoWayLiveSummaryFormat" xml:space="preserve">
+    <value>{0} | Budget: {1:F0} RUB | Push: {2} | {3}</value>
+  </data>
+  <data name="TwoWayPushEnabledValue" xml:space="preserve">
+    <value>enabled</value>
+  </data>
+  <data name="TwoWayPushDisabledValue" xml:space="preserve">
+    <value>disabled</value>
+  </data>
+  <data name="OneTimeSectionTitle" xml:space="preserve">
+    <value>How OneTime works</value>
+  </data>
+  <data name="OneTimeSectionDescription" xml:space="preserve">
+    <value>One-time binding reads the value only once when the binding is created or the source is replaced. Later source changes do not automatically appear in the UI.</value>
+  </data>
+  <data name="OneTimeDirectCardTitle" xml:space="preserve">
+    <value>Direct one-time binding</value>
+  </data>
+  <data name="OneTimeDirectCardDescription" xml:space="preserve">
+    <value>The target memorizes the source element state and does not update again until the binding is recreated.</value>
+  </data>
+  <data name="OneTimeDirectTextSourceLabel" xml:space="preserve">
+    <value>Source: TextBox</value>
+  </data>
+  <data name="OneTimeDirectSliderSourceLabel" xml:space="preserve">
+    <value>Source: Slider</value>
+  </data>
+  <data name="OneTimeDirectSnapshotTitle" xml:space="preserve">
+    <value>OneTime snapshot</value>
+  </data>
+  <data name="OneTimeDirectTextInitial" xml:space="preserve">
+    <value>Text snapshot at load time</value>
+  </data>
+  <data name="OneTimeViewModelCardTitle" xml:space="preserve">
+    <value>OneTime through ViewModel</value>
+  </data>
+  <data name="OneTimeViewModelCardDescription" xml:space="preserve">
+    <value>The current data changes on the left, while the card below receives it only after the snapshot is recreated.</value>
+  </data>
+  <data name="OneTimeDraftTitleLabel" xml:space="preserve">
+    <value>Draft title</value>
+  </data>
+  <data name="OneTimeDraftCommentLabel" xml:space="preserve">
+    <value>Draft comment</value>
+  </data>
+  <data name="OneTimeProgressLabel" xml:space="preserve">
+    <value>Progress</value>
+  </data>
+  <data name="OneTimeRefreshButton" xml:space="preserve">
+    <value>Refresh snapshot</value>
+  </data>
+  <data name="OneTimeViewModelSnapshotTitle" xml:space="preserve">
+    <value>ViewModel snapshot</value>
+  </data>
+  <data name="OneTimeDraftTitleInitial" xml:space="preserve">
+    <value>Report prototype</value>
+  </data>
+  <data name="OneTimeDraftCommentInitial" xml:space="preserve">
+    <value>The snapshot captures the state only at the moment it is created.</value>
+  </data>
+  <data name="SnapshotUpdatedMessage" xml:space="preserve">
+    <value>Snapshot refreshed. Captured progress: {0:F0}%.</value>
+  </data>
+  <data name="OneWaySectionTitle" xml:space="preserve">
+    <value>How one-way bindings work</value>
+  </data>
+  <data name="OneWaySectionDescription" xml:space="preserve">
+    <value>OneWay updates only the target from the source, while OneWayToSource works in the opposite direction: changes go to the source, but the initial value is not pushed into the control.</value>
+  </data>
+  <data name="OneWayDirectCardTitle" xml:space="preserve">
+    <value>Direct OneWay and OneWayToSource</value>
+  </data>
+  <data name="OneWayDirectCardDescription" xml:space="preserve">
+    <value>On the left the source and target are connected directly through ElementName without ViewModel involvement.</value>
+  </data>
+  <data name="OneWayDirectSourceLabel" xml:space="preserve">
+    <value>Source for OneWay</value>
+  </data>
+  <data name="OneWayDirectStorageTitle" xml:space="preserve">
+    <value>TextBox writes to Border.Tag via OneWayToSource</value>
+  </data>
+  <data name="OneWayDirectStorageInitial" xml:space="preserve">
+    <value>The storage has not received text yet</value>
+  </data>
+  <data name="OneWayViewModelCardTitle" xml:space="preserve">
+    <value>One-way modes through ViewModel</value>
+  </data>
+  <data name="OneWayViewModelCardDescription" xml:space="preserve">
+    <value>The button changes the source in the ViewModel, while the UI elements only read it. The TextBox with OneWayToSource below sends text into the model and stays empty when the initial value is loaded.</value>
+  </data>
+  <data name="OneWayAdvanceTelemetryButton" xml:space="preserve">
+    <value>Advance telemetry</value>
+  </data>
+  <data name="OneWaySyncCheckbox" xml:space="preserve">
+    <value>Synchronization is active</value>
+  </data>
+  <data name="OneWayToSourceTitle" xml:space="preserve">
+    <value>OneWayToSource in ViewModel</value>
+  </data>
+  <data name="OneWayNotesToSourceInitial" xml:space="preserve">
+    <value>Initial model value</value>
+  </data>
+  <data name="TelemetryLowLoadMessage" xml:space="preserve">
+    <value>Low load. The interface is running in a calm mode.</value>
+  </data>
+  <data name="TelemetryMediumLoadMessage" xml:space="preserve">
+    <value>Medium load. Values arrive only from the model.</value>
+  </data>
+  <data name="TelemetryHighLoadMessage" xml:space="preserve">
+    <value>High load. The UI updates from the source but does not write back.</value>
+  </data>
+  <data name="TelemetryLevelCaptionFormat" xml:space="preserve">
+    <value>Current stream value: {0:F0}%</value>
+  </data>
+  <data name="TriggersSectionTitle" xml:space="preserve">
+    <value>Differences between triggers</value>
+  </data>
+  <data name="TriggersSectionDescription" xml:space="preserve">
+    <value>Triggers let you change the appearance and behavior of an element without code-behind: a regular Trigger reacts to the element's own properties, DataTrigger reacts to data, MultiTrigger and MultiDataTrigger react to combinations of conditions, and EventTrigger reacts to an event.</value>
+  </data>
+  <data name="TriggersToggleOnlineButton" xml:space="preserve">
+    <value>Toggle Online</value>
+  </data>
+  <data name="TriggersTogglePriorityButton" xml:space="preserve">
+    <value>Toggle Priority</value>
+  </data>
+  <data name="TriggersToggleWarningsButton" xml:space="preserve">
+    <value>Toggle Warnings</value>
+  </data>
+  <data name="TriggersResetButton" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="TriggerCardTitle" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="TriggerCardDescription" xml:space="preserve">
+    <value>A regular Trigger watches a property of the element itself. Hover over the button and press it.</value>
+  </data>
+  <data name="TriggerDemoButton" xml:space="preserve">
+    <value>Hover / Press me</value>
+  </data>
+  <data name="DataTriggerCardTitle" xml:space="preserve">
+    <value>DataTrigger</value>
+  </data>
+  <data name="DataTriggerCardDescription" xml:space="preserve">
+    <value>DataTrigger changes the styling based on a ViewModel property value.</value>
+  </data>
+  <data name="DataTriggerPriorityLabel" xml:space="preserve">
+    <value>Priority mode</value>
+  </data>
+  <data name="MultiTriggerCardTitle" xml:space="preserve">
+    <value>MultiTrigger</value>
+  </data>
+  <data name="MultiTriggerCardDescription" xml:space="preserve">
+    <value>MultiTrigger considers several properties of the same element at once.</value>
+  </data>
+  <data name="MultiTriggerDemoButton" xml:space="preserve">
+    <value>Hover and Press</value>
+  </data>
+  <data name="MultiDataTriggerCardTitle" xml:space="preserve">
+    <value>MultiDataTrigger + EventTrigger</value>
+  </data>
+  <data name="MultiDataTriggerCardDescription" xml:space="preserve">
+    <value>MultiDataTrigger reacts to a set of data conditions. The EventTrigger below starts an animation when the element is loaded.</value>
+  </data>
+  <data name="MultiDataTriggerCombinedStateLabel" xml:space="preserve">
+    <value>Combined state</value>
+  </data>
+  <data name="TriggersOnlineLabel" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="TriggersPriorityLabel" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="TriggersWarningsLabel" xml:space="preserve">
+    <value>Warnings</value>
+  </data>
+  <data name="TriggersCurrentStateFormat" xml:space="preserve">
+    <value>{0}: {1} | {2}: {3} | {4}: {5}</value>
+  </data>
+</root>

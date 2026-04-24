@@ -1,5 +1,7 @@
+using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using GitLabOop.Services;
 
 namespace GitLabOop.ViewModels;
 
@@ -15,16 +17,24 @@ public partial class OneWayBindingsViewModel : ObservableObject
     private bool hasSync = true;
 
     [ObservableProperty]
-    private string notesToSource = "Начальное значение модели";
+    private string notesToSource = string.Empty;
+
+    private string lastLocalizedNotesToSource = string.Empty;
+
+    public OneWayBindingsViewModel()
+    {
+        ApplyLocalizedSeeds(forceUpdate: true);
+        LocalizationManager.Instance.LanguageChanged += HandleLanguageChanged;
+    }
 
     public string SystemMessage => TelemetryLevel switch
     {
-        < 35 => "Низкая загрузка. Интерфейс работает в спокойном режиме.",
-        < 70 => "Средняя загрузка. Значения приходят только из модели.",
-        _ => "Высокая загрузка. UI обновляется от источника, но не пишет обратно."
+        < 35 => LocalizationManager.Instance["TelemetryLowLoadMessage"],
+        < 70 => LocalizationManager.Instance["TelemetryMediumLoadMessage"],
+        _ => LocalizationManager.Instance["TelemetryHighLoadMessage"]
     };
 
-    public string LevelCaption => $"Текущее значение потока: {TelemetryLevel:F0}%";
+    public string LevelCaption => LocalizationManager.Instance.Format("TelemetryLevelCaptionFormat", TelemetryLevel);
 
     [RelayCommand]
     private void AdvanceTelemetry()
@@ -35,5 +45,23 @@ public partial class OneWayBindingsViewModel : ObservableObject
             TelemetryLevel = 16;
             HasSync = !HasSync;
         }
+    }
+
+    private void ApplyLocalizedSeeds(bool forceUpdate = false)
+    {
+        var localizedNotes = LocalizationManager.Instance.GetString("OneWayNotesToSourceInitial");
+        if (forceUpdate || string.IsNullOrWhiteSpace(NotesToSource) || NotesToSource == lastLocalizedNotesToSource)
+        {
+            NotesToSource = localizedNotes;
+        }
+
+        lastLocalizedNotesToSource = localizedNotes;
+    }
+
+    private void HandleLanguageChanged(object? sender, EventArgs e)
+    {
+        ApplyLocalizedSeeds();
+        OnPropertyChanged(nameof(SystemMessage));
+        OnPropertyChanged(nameof(LevelCaption));
     }
 }

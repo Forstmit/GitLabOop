@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:services="clr-namespace:GitLabOop.Services"
         xmlns:views="clr-namespace:GitLabOop.Views"
         mc:Ignorable="d"
-        Title="ЛР 1. Демонстрация привязок и триггеров"
+        Title="{services:Loc MainWindowTitle}"
         Width="1280"
         Height="900"
         MinWidth="1100"
@@ -26,10 +27,10 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel>
-                    <TextBlock Text="Лабораторная работа №1"
+                    <TextBlock Text="{services:Loc HeroTitle}"
                                Style="{StaticResource HeroTitleStyle}" />
                     <TextBlock Margin="0,8,0,0"
-                               Text="WPF-приложение показывает режимы привязки данных, различия между прямой привязкой к элементам интерфейса и работой через ViewModel, а также разные типы триггеров."
+                               Text="{services:Loc HeroSubtitle}"
                                Style="{StaticResource HeroSubtitleStyle}" />
                 </StackPanel>
 
@@ -39,12 +40,19 @@
                         VerticalAlignment="Center"
                         Background="#1FFFFFFF"
                         CornerRadius="18">
-                    <StackPanel>
-                        <TextBlock Text="Подход"
+                    <StackPanel MinWidth="220">
+                        <TextBlock Text="{services:Loc HeroApproachLabel}"
                                    Style="{StaticResource MutedCaptionStyle}" />
                         <TextBlock Margin="0,4,0,0"
-                                   Text="Ручная MVVM-реализация"
+                                   Text="{services:Loc HeroApproachValue}"
                                    Style="{StaticResource BadgeValueStyle}" />
+                        <TextBlock Margin="0,14,0,0"
+                                   Text="{services:Loc LanguageLabel}"
+                                   Style="{StaticResource MutedCaptionStyle}" />
+                        <ComboBox Margin="0,6,0,0"
+                                  ItemsSource="{Binding Languages}"
+                                  SelectedItem="{Binding SelectedLanguage, Mode=TwoWay}"
+                                  DisplayMemberPath="DisplayName" />
                     </StackPanel>
                 </Border>
             </Grid>
@@ -54,19 +62,19 @@
                 Margin="0,18,0,0"
                 Style="{StaticResource ShellPanelStyle}">
             <TabControl Style="{StaticResource ShowcaseTabControlStyle}">
-                <TabItem Header="Привязка по умолчанию">
+                <TabItem Header="{services:Loc TabDefaultBinding}">
                     <views:DefaultBindingView DataContext="{Binding DefaultBinding}" />
                 </TabItem>
-                <TabItem Header="Двухсторонняя привязка">
+                <TabItem Header="{services:Loc TabTwoWayBinding}">
                     <views:TwoWayBindingView DataContext="{Binding TwoWayBinding}" />
                 </TabItem>
-                <TabItem Header="Одноразовая привязка">
+                <TabItem Header="{services:Loc TabOneTimeBinding}">
                     <views:OneTimeBindingView DataContext="{Binding OneTimeBinding}" />
                 </TabItem>
-                <TabItem Header="Односторонние привязки">
+                <TabItem Header="{services:Loc TabOneWayBindings}">
                     <views:OneWayBindingsView DataContext="{Binding OneWayBindings}" />
                 </TabItem>
-                <TabItem Header="Триггеры">
+                <TabItem Header="{services:Loc TabTriggers}">
                     <views:TriggersView DataContext="{Binding Triggers}" />
                 </TabItem>
             </TabControl>
