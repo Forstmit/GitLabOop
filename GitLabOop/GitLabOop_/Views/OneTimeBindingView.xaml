@@ -1,0 +1,115 @@
+<UserControl x:Class="GitLabOop.Views.OneTimeBindingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="8">
+            <Border Style="{StaticResource SurfaceCardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Как работает OneTime"
+                               Style="{StaticResource SectionTitleStyle}" />
+                    <TextBlock Margin="0,10,0,0"
+                               Text="Одноразовая привязка берёт значение только один раз в момент создания привязки или смены источника. Поздние изменения в источнике автоматически в UI не попадают."
+                               Style="{StaticResource InfoTextStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Margin="0,0,10,0"
+                        Style="{StaticResource SurfaceCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="Прямая одноразовая привязка"
+                                   Style="{StaticResource CardTitleStyle}" />
+                        <TextBlock Margin="0,8,0,18"
+                                   Text="Target запоминает состояние исходного элемента и больше не обновляется, пока привязка не будет пересоздана."
+                                   Style="{StaticResource InfoTextStyle}" />
+
+                        <TextBlock Text="Источник: TextBox"
+                                   Style="{StaticResource InputLabelStyle}" />
+                        <TextBox x:Name="DirectOneTimeText"
+                                 Text="Снимок текста при загрузке" />
+
+                        <TextBlock Text="Источник: Slider"
+                                   Style="{StaticResource InputLabelStyle}" />
+                        <Slider x:Name="DirectOneTimeSlider"
+                                Minimum="0"
+                                Maximum="100"
+                                Value="38" />
+
+                        <Border Style="{StaticResource SummaryBadgeStyle}">
+                            <StackPanel>
+                                <TextBlock Text="Снимок OneTime"
+                                           Style="{StaticResource InputLabelStyle}" />
+                                <TextBlock Text="{Binding ElementName=DirectOneTimeText, Path=Text, Mode=OneTime}"
+                                           Style="{StaticResource InfoTextStyle}" />
+                                <TextBlock Margin="0,8,0,0"
+                                           Text="{Binding ElementName=DirectOneTimeSlider, Path=Value, Mode=OneTime, StringFormat={}{0:F0}%}"
+                                           Style="{StaticResource InfoTextStyle}" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1"
+                        Margin="10,0,0,0"
+                        Style="{StaticResource SurfaceCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="OneTime через ViewModel"
+                                   Style="{StaticResource CardTitleStyle}" />
+                        <TextBlock Margin="0,8,0,18"
+                                   Text="Слева изменяются текущие данные, а карточка ниже получает их только после пересоздания снимка."
+                                   Style="{StaticResource InfoTextStyle}" />
+
+                        <TextBlock Text="Черновой заголовок"
+                                   Style="{StaticResource InputLabelStyle}" />
+                        <TextBox Text="{Binding DraftTitle, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <TextBlock Text="Черновой комментарий"
+                                   Style="{StaticResource InputLabelStyle}" />
+                        <TextBox Text="{Binding DraftComment, UpdateSourceTrigger=PropertyChanged}" />
+
+                        <TextBlock Text="Прогресс"
+                                   Style="{StaticResource InputLabelStyle}" />
+                        <Slider Minimum="0"
+                                Maximum="100"
+                                Value="{Binding DraftProgress}" />
+
+                        <Button Content="Обновить снимок"
+                                Style="{StaticResource AccentButtonStyle}"
+                                Command="{Binding RefreshSnapshotCommand}" />
+
+                        <ContentControl Margin="0,8,0,0"
+                                        Content="{Binding Snapshot}">
+                            <ContentControl.ContentTemplate>
+                                <DataTemplate>
+                                    <Border Style="{StaticResource SummaryBadgeStyle}">
+                                        <StackPanel>
+                                            <TextBlock Text="Снимок ViewModel"
+                                                       Style="{StaticResource InputLabelStyle}" />
+                                            <TextBlock Text="{Binding PrimaryText, Mode=OneTime}"
+                                                       Style="{StaticResource InfoTextStyle}" />
+                                            <TextBlock Margin="0,8,0,0"
+                                                       Text="{Binding SecondaryText, Mode=OneTime}"
+                                                       Style="{StaticResource InfoTextStyle}" />
+                                            <ProgressBar Minimum="0"
+                                                         Maximum="100"
+                                                         Value="{Binding NumericValue, Mode=OneTime}" />
+                                        </StackPanel>
+                                    </Border>
+                                </DataTemplate>
+                            </ContentControl.ContentTemplate>
+                        </ContentControl>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

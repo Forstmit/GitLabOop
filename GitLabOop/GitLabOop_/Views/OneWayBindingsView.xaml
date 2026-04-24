@@ -1,0 +1,105 @@
+<UserControl x:Class="GitLabOop.Views.OneWayBindingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="8">
+            <Border Style="{StaticResource SurfaceCardStyle}">
+                <StackPanel>
+                    <TextBlock Text="Как работают односторонние привязки"
+                               Style="{StaticResource SectionTitleStyle}" />
+                    <TextBlock Margin="0,10,0,0"
+                               Text="OneWay обновляет только цель из источника, а OneWayToSource работает наоборот: изменения уходят в источник, но исходное значение в контрол не подставляется."
+                               Style="{StaticResource InfoTextStyle}" />
+                </StackPanel>
+            </Border>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0"
+                        Margin="0,0,10,0"
+                        Style="{StaticResource SurfaceCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="Прямые OneWay и OneWayToSource"
+                                   Style="{StaticResource CardTitleStyle}" />
+                        <TextBlock Margin="0,8,0,18"
+                                   Text="Слева источник и приёмник связаны напрямую через ElementName без участия ViewModel."
+                                   Style="{StaticResource InfoTextStyle}" />
+
+                        <TextBlock Text="Источник для OneWay"
+                                   Style="{StaticResource InputLabelStyle}" />
+                        <Slider x:Name="DirectOneWaySlider"
+                                Minimum="0"
+                                Maximum="100"
+                                Value="41" />
+                        <ProgressBar Minimum="0"
+                                     Maximum="100"
+                                     Value="{Binding ElementName=DirectOneWaySlider, Path=Value, Mode=OneWay}" />
+                        <TextBlock Text="{Binding ElementName=DirectOneWaySlider, Path=Value, Mode=OneWay, StringFormat={}{0:F0}%}"
+                                   Style="{StaticResource InfoTextStyle}" />
+
+                        <Border x:Name="DirectSourceStorage"
+                                Margin="0,10,0,0"
+                                Tag="Хранилище ещё не получало текст"
+                                Padding="14"
+                                CornerRadius="14"
+                                Background="{StaticResource AccentSoftBrush}">
+                            <StackPanel>
+                                <TextBlock Text="TextBox пишет в Border.Tag через OneWayToSource"
+                                           Style="{StaticResource InputLabelStyle}" />
+                                <TextBox Text="{Binding ElementName=DirectSourceStorage, Path=Tag, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock Text="{Binding ElementName=DirectSourceStorage, Path=Tag}"
+                                           Style="{StaticResource InfoTextStyle}" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+
+                <Border Grid.Column="1"
+                        Margin="10,0,0,0"
+                        Style="{StaticResource SurfaceCardStyle}">
+                    <StackPanel>
+                        <TextBlock Text="Односторонние режимы через ViewModel"
+                                   Style="{StaticResource CardTitleStyle}" />
+                        <TextBlock Margin="0,8,0,18"
+                                   Text="Кнопка меняет источник во ViewModel, а элементы только читают его. Ниже TextBox с OneWayToSource отправляет текст в модель, оставаясь пустым при начальном значении."
+                                   Style="{StaticResource InfoTextStyle}" />
+
+                        <Button Content="Изменить телеметрию"
+                                Style="{StaticResource AccentButtonStyle}"
+                                Command="{Binding AdvanceTelemetryCommand}" />
+
+                        <ProgressBar Minimum="0"
+                                     Maximum="100"
+                                     Value="{Binding TelemetryLevel, Mode=OneWay}" />
+                        <TextBlock Text="{Binding LevelCaption, Mode=OneWay}"
+                                   Style="{StaticResource InfoTextStyle}" />
+                        <TextBlock Margin="0,8,0,0"
+                                   Text="{Binding SystemMessage, Mode=OneWay}"
+                                   Style="{StaticResource InfoTextStyle}" />
+                        <CheckBox Content="Синхронизация активна"
+                                  IsChecked="{Binding HasSync, Mode=OneWay}"
+                                  IsEnabled="False" />
+
+                        <Border Margin="0,14,0,0"
+                                Style="{StaticResource SummaryBadgeStyle}">
+                            <StackPanel>
+                                <TextBlock Text="OneWayToSource в ViewModel"
+                                           Style="{StaticResource InputLabelStyle}" />
+                                <TextBox Text="{Binding NotesToSource, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
+                                <TextBlock Text="{Binding NotesToSource}"
+                                           Style="{StaticResource InfoTextStyle}" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

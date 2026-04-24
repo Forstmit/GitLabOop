@@ -1,0 +1,75 @@
+<Window x:Class="GitLabOop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:GitLabOop.Views"
+        mc:Ignorable="d"
+        Title="ЛР 1. Демонстрация привязок и триггеров"
+        Width="1280"
+        Height="900"
+        MinWidth="1100"
+        MinHeight="780"
+        WindowStartupLocation="CenterScreen"
+        Background="{StaticResource WindowBackgroundBrush}">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border Style="{StaticResource HeroPanelStyle}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel>
+                    <TextBlock Text="Лабораторная работа №1"
+                               Style="{StaticResource HeroTitleStyle}" />
+                    <TextBlock Margin="0,8,0,0"
+                               Text="WPF-приложение показывает режимы привязки данных, различия между прямой привязкой к элементам интерфейса и работой через ViewModel, а также разные типы триггеров."
+                               Style="{StaticResource HeroSubtitleStyle}" />
+                </StackPanel>
+
+                <Border Grid.Column="1"
+                        Padding="16,10"
+                        Margin="24,0,0,0"
+                        VerticalAlignment="Center"
+                        Background="#1FFFFFFF"
+                        CornerRadius="18">
+                    <StackPanel>
+                        <TextBlock Text="Подход"
+                                   Style="{StaticResource MutedCaptionStyle}" />
+                        <TextBlock Margin="0,4,0,0"
+                                   Text="Ручная MVVM-реализация"
+                                   Style="{StaticResource BadgeValueStyle}" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Border Grid.Row="1"
+                Margin="0,18,0,0"
+                Style="{StaticResource ShellPanelStyle}">
+            <TabControl Style="{StaticResource ShowcaseTabControlStyle}">
+                <TabItem Header="Привязка по умолчанию">
+                    <views:DefaultBindingView DataContext="{Binding DefaultBinding}" />
+                </TabItem>
+                <TabItem Header="Двухсторонняя привязка">
+                    <views:TwoWayBindingView DataContext="{Binding TwoWayBinding}" />
+                </TabItem>
+                <TabItem Header="Одноразовая привязка">
+                    <views:OneTimeBindingView DataContext="{Binding OneTimeBinding}" />
+                </TabItem>
+                <TabItem Header="Односторонние привязки">
+                    <views:OneWayBindingsView DataContext="{Binding OneWayBindings}" />
+                </TabItem>
+                <TabItem Header="Триггеры">
+                    <views:TriggersView DataContext="{Binding Triggers}" />
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</Window>
