@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MainWindowTitle" xml:space="preserve">
+    <value>ЛР 1. Демонстрация привязок и триггеров</value>
+  </data>
+  <data name="HeroTitle" xml:space="preserve">
+    <value>Лабораторная работа №1</value>
+  </data>
+  <data name="HeroSubtitle" xml:space="preserve">
+    <value>WPF-приложение показывает режимы привязки данных, различия между прямой привязкой к элементам интерфейса и работой через ViewModel, а также разные типы триггеров.</value>
+  </data>
+  <data name="HeroApproachLabel" xml:space="preserve">
+    <value>Подход</value>
+  </data>
+  <data name="HeroApproachValue" xml:space="preserve">
+    <value>Ручная MVVM-реализация</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Язык интерфейса</value>
+  </data>
+  <data name="LanguageOptionRussian" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="LanguageOptionEnglish" xml:space="preserve">
+    <value>Английский</value>
+  </data>
+  <data name="TabDefaultBinding" xml:space="preserve">
+    <value>Привязка по умолчанию</value>
+  </data>
+  <data name="TabTwoWayBinding" xml:space="preserve">
+    <value>Двухсторонняя привязка</value>
+  </data>
+  <data name="TabOneTimeBinding" xml:space="preserve">
+    <value>Одноразовая привязка</value>
+  </data>
+  <data name="TabOneWayBindings" xml:space="preserve">
+    <value>Односторонние привязки</value>
+  </data>
+  <data name="TabTriggers" xml:space="preserve">
+    <value>Триггеры</value>
+  </data>
+  <data name="CommonYes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="CommonNo" xml:space="preserve">
+    <value>Нет</value>
+  </data>
+  <data name="DefaultSectionTitle" xml:space="preserve">
+    <value>Как работает режим Default</value>
+  </data>
+  <data name="DefaultSectionDescription" xml:space="preserve">
+    <value>Если Mode не указан, WPF берёт режим по умолчанию из целевого свойства. Для TextBox.Text и CheckBox.IsChecked это обычно двухсторонняя привязка, а для TextBlock.Text или Opacity — односторонняя.</value>
+  </data>
+  <data name="DefaultDirectCardTitle" xml:space="preserve">
+    <value>Прямая привязка к элементам интерфейса</value>
+  </data>
+  <data name="DefaultDirectCardDescription" xml:space="preserve">
+    <value>TextBox получает двухстороннее поведение по умолчанию, а TextBlock и ProgressBar просто читают значение у Slider.</value>
+  </data>
+  <data name="DefaultDirectSourceSliderLabel" xml:space="preserve">
+    <value>Источник: Slider.Value</value>
+  </data>
+  <data name="DefaultDirectTextBoxLabel" xml:space="preserve">
+    <value>TextBox (Mode не указан)</value>
+  </data>
+  <data name="DefaultDirectTextBlockLabel" xml:space="preserve">
+    <value>TextBlock (Mode не указан)</value>
+  </data>
+  <data name="DefaultDirectProgressBarLabel" xml:space="preserve">
+    <value>ProgressBar читает то же значение</value>
+  </data>
+  <data name="DefaultViewModelCardTitle" xml:space="preserve">
+    <value>Привязка через ViewModel</value>
+  </data>
+  <data name="DefaultViewModelCardDescription" xml:space="preserve">
+    <value>Здесь целевые элементы работают уже не друг с другом, а через свойства ViewModel.</value>
+  </data>
+  <data name="DefaultPresenterNameLabel" xml:space="preserve">
+    <value>Название блока</value>
+  </data>
+  <data name="DefaultNotesLabel" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="DefaultPinCardCheckbox" xml:space="preserve">
+    <value>Закрепить карточку</value>
+  </data>
+  <data name="DefaultAccentOpacityLabel" xml:space="preserve">
+    <value>Прозрачность акцента</value>
+  </data>
+  <data name="DefaultBindingPresenterNameInitial" xml:space="preserve">
+    <value>Утренний бриф команды</value>
+  </data>
+  <data name="DefaultBindingNotesInitial" xml:space="preserve">
+    <value>Изменения в TextBox и CheckBox уходят в модель без явного указания режима.</value>
+  </data>
+  <data name="DefaultBindingSummaryFormat" xml:space="preserve">
+    <value>{0} | Прозрачность акцента: {1:F0}% | Закреплено: {2}</value>
+  </data>
+  <data name="TwoWaySectionTitle" xml:space="preserve">
+    <value>Как работает TwoWay</value>
+  </data>
+  <data name="TwoWaySectionDescription" xml:space="preserve">
+    <value>При двухсторонней привязке целевой элемент не только получает данные от источника, но и отправляет изменения обратно.</value>
+  </data>
+  <data name="TwoWayDirectCardTitle" xml:space="preserve">
+    <value>Прямая двухсторонняя привязка</value>
+  </data>
+  <data name="TwoWayDirectCardDescription" xml:space="preserve">
+    <value>Элементы синхронизируются напрямую через ElementName и явный Mode=TwoWay.</value>
+  </data>
+  <data name="TwoWayDirectPrimaryTextLabel" xml:space="preserve">
+    <value>Основной текст</value>
+  </data>
+  <data name="TwoWayDirectMirrorTextLabel" xml:space="preserve">
+    <value>Зеркальный TextBox</value>
+  </data>
+  <data name="TwoWayDirectSliderSourceLabel" xml:space="preserve">
+    <value>Источник: Slider</value>
+  </data>
+  <data name="TwoWayDirectBudgetTextLabel" xml:space="preserve">
+    <value>TextBox редактирует тот же источник</value>
+  </data>
+  <data name="TwoWayDirectPushCheckbox" xml:space="preserve">
+    <value>Флаг отправки включён</value>
+  </data>
+  <data name="TwoWayDirectToggleButton" xml:space="preserve">
+    <value>Повторяет состояние CheckBox</value>
+  </data>
+  <data name="TwoWayDirectSourceTextInitial" xml:space="preserve">
+    <value>Синхронный ввод</value>
+  </data>
+  <data name="TwoWayViewModelCardTitle" xml:space="preserve">
+    <value>TwoWay через ViewModel</value>
+  </data>
+  <data name="TwoWayViewModelCardDescription" xml:space="preserve">
+    <value>Все элементы пишут и читают одни и те же свойства ViewModel.</value>
+  </data>
+  <data name="TwoWayFullNameLabel" xml:space="preserve">
+    <value>ФИО</value>
+  </data>
+  <data name="TwoWayFeedbackLabel" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="TwoWayBudgetLabel" xml:space="preserve">
+    <value>Бюджет</value>
+  </data>
+  <data name="TwoWayPushCheckbox" xml:space="preserve">
+    <value>Включить push-уведомления</value>
+  </data>
+  <data name="TwoWayFullNameInitial" xml:space="preserve">
+    <value>Иван Иванов</value>
+  </data>
+  <data name="TwoWayFeedbackInitial" xml:space="preserve">
+    <value>Запрос подтверждён</value>
+  </data>
+  <data name="TwoWayLiveSummaryFormat" xml:space="preserve">
+    <value>{0} | Бюджет: {1:F0} ₽ | Push: {2} | {3}</value>
+  </data>
+  <data name="TwoWayPushEnabledValue" xml:space="preserve">
+    <value>включены</value>
+  </data>
+  <data name="TwoWayPushDisabledValue" xml:space="preserve">
+    <value>выключены</value>
+  </data>
+  <data name="OneTimeSectionTitle" xml:space="preserve">
+    <value>Как работает OneTime</value>
+  </data>
+  <data name="OneTimeSectionDescription" xml:space="preserve">
+    <value>Одноразовая привязка берёт значение только один раз в момент создания привязки или смены источника. Поздние изменения в источнике автоматически в UI не попадают.</value>
+  </data>
+  <data name="OneTimeDirectCardTitle" xml:space="preserve">
+    <value>Прямая одноразовая привязка</value>
+  </data>
+  <data name="OneTimeDirectCardDescription" xml:space="preserve">
+    <value>Target запоминает состояние исходного элемента и больше не обновляется, пока привязка не будет пересоздана.</value>
+  </data>
+  <data name="OneTimeDirectTextSourceLabel" xml:space="preserve">
+    <value>Источник: TextBox</value>
+  </data>
+  <data name="OneTimeDirectSliderSourceLabel" xml:space="preserve">
+    <value>Источник: Slider</value>
+  </data>
+  <data name="OneTimeDirectSnapshotTitle" xml:space="preserve">
+    <value>Снимок OneTime</value>
+  </data>
+  <data name="OneTimeDirectTextInitial" xml:space="preserve">
+    <value>Снимок текста при загрузке</value>
+  </data>
+  <data name="OneTimeViewModelCardTitle" xml:space="preserve">
+    <value>OneTime через ViewModel</value>
+  </data>
+  <data name="OneTimeViewModelCardDescription" xml:space="preserve">
+    <value>Слева изменяются текущие данные, а карточка ниже получает их только после пересоздания снимка.</value>
+  </data>
+  <data name="OneTimeDraftTitleLabel" xml:space="preserve">
+    <value>Черновой заголовок</value>
+  </data>
+  <data name="OneTimeDraftCommentLabel" xml:space="preserve">
+    <value>Черновой комментарий</value>
+  </data>
+  <data name="OneTimeProgressLabel" xml:space="preserve">
+    <value>Прогресс</value>
+  </data>
+  <data name="OneTimeRefreshButton" xml:space="preserve">
+    <value>Обновить снимок</value>
+  </data>
+  <data name="OneTimeViewModelSnapshotTitle" xml:space="preserve">
+    <value>Снимок ViewModel</value>
+  </data>
+  <data name="OneTimeDraftTitleInitial" xml:space="preserve">
+    <value>Прототип отчёта</value>
+  </data>
+  <data name="OneTimeDraftCommentInitial" xml:space="preserve">
+    <value>Снимок фиксирует состояние только в момент создания.</value>
+  </data>
+  <data name="SnapshotUpdatedMessage" xml:space="preserve">
+    <value>Снимок обновлён. Зафиксирован прогресс: {0:F0}%.</value>
+  </data>
+  <data name="OneWaySectionTitle" xml:space="preserve">
+    <value>Как работают односторонние привязки</value>
+  </data>
+  <data name="OneWaySectionDescription" xml:space="preserve">
+    <value>OneWay обновляет только цель из источника, а OneWayToSource работает наоборот: изменения уходят в источник, но исходное значение в контрол не подставляется.</value>
+  </data>
+  <data name="OneWayDirectCardTitle" xml:space="preserve">
+    <value>Прямые OneWay и OneWayToSource</value>
+  </data>
+  <data name="OneWayDirectCardDescription" xml:space="preserve">
+    <value>Слева источник и приёмник связаны напрямую через ElementName без участия ViewModel.</value>
+  </data>
+  <data name="OneWayDirectSourceLabel" xml:space="preserve">
+    <value>Источник для OneWay</value>
+  </data>
+  <data name="OneWayDirectStorageTitle" xml:space="preserve">
+    <value>TextBox пишет в Border.Tag через OneWayToSource</value>
+  </data>
+  <data name="OneWayDirectStorageInitial" xml:space="preserve">
+    <value>Хранилище ещё не получало текст</value>
+  </data>
+  <data name="OneWayViewModelCardTitle" xml:space="preserve">
+    <value>Односторонние режимы через ViewModel</value>
+  </data>
+  <data name="OneWayViewModelCardDescription" xml:space="preserve">
+    <value>Кнопка меняет источник во ViewModel, а элементы только читают его. Ниже TextBox с OneWayToSource отправляет текст в модель, оставаясь пустым при начальном значении.</value>
+  </data>
+  <data name="OneWayAdvanceTelemetryButton" xml:space="preserve">
+    <value>Изменить телеметрию</value>
+  </data>
+  <data name="OneWaySyncCheckbox" xml:space="preserve">
+    <value>Синхронизация активна</value>
+  </data>
+  <data name="OneWayToSourceTitle" xml:space="preserve">
+    <value>OneWayToSource в ViewModel</value>
+  </data>
+  <data name="OneWayNotesToSourceInitial" xml:space="preserve">
+    <value>Начальное значение модели</value>
+  </data>
+  <data name="TelemetryLowLoadMessage" xml:space="preserve">
+    <value>Низкая загрузка. Интерфейс работает в спокойном режиме.</value>
+  </data>
+  <data name="TelemetryMediumLoadMessage" xml:space="preserve">
+    <value>Средняя загрузка. Значения приходят только из модели.</value>
+  </data>
+  <data name="TelemetryHighLoadMessage" xml:space="preserve">
+    <value>Высокая загрузка. UI обновляется от источника, но не пишет обратно.</value>
+  </data>
+  <data name="TelemetryLevelCaptionFormat" xml:space="preserve">
+    <value>Текущее значение потока: {0:F0}%</value>
+  </data>
+  <data name="TriggersSectionTitle" xml:space="preserve">
+    <value>Разница между триггерами</value>
+  </data>
+  <data name="TriggersSectionDescription" xml:space="preserve">
+    <value>Триггеры позволяют менять внешний вид и поведение элемента без code-behind: обычный Trigger реагирует на свойства самого элемента, DataTrigger — на данные, MultiTrigger и MultiDataTrigger — на сочетание условий, EventTrigger — на событие.</value>
+  </data>
+  <data name="TriggersToggleOnlineButton" xml:space="preserve">
+    <value>Переключить Online</value>
+  </data>
+  <data name="TriggersTogglePriorityButton" xml:space="preserve">
+    <value>Переключить Priority</value>
+  </data>
+  <data name="TriggersToggleWarningsButton" xml:space="preserve">
+    <value>Переключить Warnings</value>
+  </data>
+  <data name="TriggersResetButton" xml:space="preserve">
+    <value>Сбросить</value>
+  </data>
+  <data name="TriggerCardTitle" xml:space="preserve">
+    <value>Trigger</value>
+  </data>
+  <data name="TriggerCardDescription" xml:space="preserve">
+    <value>Обычный Trigger следит за свойством самого элемента. Наведи курсор и нажми кнопку.</value>
+  </data>
+  <data name="TriggerDemoButton" xml:space="preserve">
+    <value>Наведи / Нажми</value>
+  </data>
+  <data name="DataTriggerCardTitle" xml:space="preserve">
+    <value>DataTrigger</value>
+  </data>
+  <data name="DataTriggerCardDescription" xml:space="preserve">
+    <value>DataTrigger меняет оформление по значению свойства во ViewModel.</value>
+  </data>
+  <data name="DataTriggerPriorityLabel" xml:space="preserve">
+    <value>Режим приоритета</value>
+  </data>
+  <data name="MultiTriggerCardTitle" xml:space="preserve">
+    <value>MultiTrigger</value>
+  </data>
+  <data name="MultiTriggerCardDescription" xml:space="preserve">
+    <value>MultiTrigger учитывает сразу несколько свойств самого элемента.</value>
+  </data>
+  <data name="MultiTriggerDemoButton" xml:space="preserve">
+    <value>Наведи и нажми</value>
+  </data>
+  <data name="MultiDataTriggerCardTitle" xml:space="preserve">
+    <value>MultiDataTrigger + EventTrigger</value>
+  </data>
+  <data name="MultiDataTriggerCardDescription" xml:space="preserve">
+    <value>MultiDataTrigger реагирует на набор условий из данных. EventTrigger ниже запускает анимацию при загрузке.</value>
+  </data>
+  <data name="MultiDataTriggerCombinedStateLabel" xml:space="preserve">
+    <value>Комбинированное состояние</value>
+  </data>
+  <data name="TriggersOnlineLabel" xml:space="preserve">
+    <value>Online</value>
+  </data>
+  <data name="TriggersPriorityLabel" xml:space="preserve">
+    <value>Priority</value>
+  </data>
+  <data name="TriggersWarningsLabel" xml:space="preserve">
+    <value>Warnings</value>
+  </data>
+  <data name="TriggersCurrentStateFormat" xml:space="preserve">
+    <value>{0}: {1} | {2}: {3} | {4}: {5}</value>
+  </data>
+</root>

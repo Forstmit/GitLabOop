@@ -36,3 +36,8 @@ C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\GitLabOop.genruntimeconfig.cache
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\ref\GitLabOop.dll
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\Resources\Theme.baml
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\bin\Debug\net8.0-windows\en\GitLabOop.resources.dll
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\GitLabOop.Properties.Strings.resources
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\GitLabOop.Properties.Strings.en.resources
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\GitLabOop.csproj.GenerateResource.cache
+C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\obj\Debug\net8.0-windows\en\GitLabOop.resources.dll
