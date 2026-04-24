@@ -8,10 +8,10 @@
         <StackPanel Margin="8">
             <Border Style="{StaticResource SurfaceCardStyle}">
                 <StackPanel>
-                    <TextBlock Text="Как работает режим Default"
+                    <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_Header]}"
                                Style="{StaticResource SectionTitleStyle}" />
                     <TextBlock Margin="0,10,0,0"
-                               Text="Если Mode не указан, WPF берёт режим по умолчанию из целевого свойства. Для TextBox.Text и CheckBox.IsChecked это обычно двухсторонняя привязка, а для TextBlock.Text или Opacity — односторонняя."
+                               Text="{Binding Source={StaticResource Loc}, Path=[Default_Description]}"
                                Style="{StaticResource InfoTextStyle}" />
                 </StackPanel>
             </Border>
@@ -26,29 +26,29 @@
                         Margin="0,0,10,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Прямая привязка к элементам интерфейса"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_DirectCardTitle]}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="TextBox получает двухстороннее поведение по умолчанию, а TextBlock и ProgressBar просто читают значение у Slider."
+                                   Text="{Binding Source={StaticResource Loc}, Path=[Default_DirectCardDescription]}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="Источник: Slider.Value"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_SourceLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider x:Name="DirectDefaultSlider"
                                 Minimum="0"
                                 Maximum="100"
                                 Value="56" />
 
-                        <TextBlock Text="TextBox (Mode не указан)"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_TextBoxLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding ElementName=DirectDefaultSlider, Path=Value, StringFormat={}{0:F0}}" />
 
-                        <TextBlock Text="TextBlock (Mode не указан)"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_TextBlockLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBlock Text="{Binding ElementName=DirectDefaultSlider, Path=Value, StringFormat={}{0:F0}%}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="ProgressBar читает то же значение"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_ProgressLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <ProgressBar Minimum="0"
                                      Maximum="100"
@@ -60,24 +60,24 @@
                         Margin="10,0,0,0"
                         Style="{StaticResource SurfaceCardStyle}">
                     <StackPanel>
-                        <TextBlock Text="Привязка через ViewModel"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_ViewModelCardTitle]}"
                                    Style="{StaticResource CardTitleStyle}" />
                         <TextBlock Margin="0,8,0,18"
-                                   Text="Здесь целевые элементы работают уже не друг с другом, а через свойства ViewModel."
+                                   Text="{Binding Source={StaticResource Loc}, Path=[Default_ViewModelCardDescription]}"
                                    Style="{StaticResource InfoTextStyle}" />
 
-                        <TextBlock Text="Название блока"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_BlockNameLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding PresenterName}" />
 
-                        <TextBlock Text="Описание"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_DescriptionLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <TextBox Text="{Binding Notes}" />
 
-                        <CheckBox Content="Закрепить карточку"
+                        <CheckBox Content="{Binding Source={StaticResource Loc}, Path=[Default_PinCard]}"
                                   IsChecked="{Binding IsPinned}" />
 
-                        <TextBlock Text="Прозрачность акцента"
+                        <TextBlock Text="{Binding Source={StaticResource Loc}, Path=[Default_AccentOpacityLabel]}"
                                    Style="{StaticResource InputLabelStyle}" />
                         <Slider Minimum="10"
                                 Maximum="100"

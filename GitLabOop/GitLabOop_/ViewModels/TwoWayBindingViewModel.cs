@@ -1,16 +1,22 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using GitLabOop.Services;
 
 namespace GitLabOop.ViewModels;
 
-public partial class TwoWayBindingViewModel : ObservableObject
+public partial class TwoWayBindingViewModel : LocalizedViewModelBase
 {
+    public TwoWayBindingViewModel(ILocalizationService localization)
+        : base(localization)
+    {
+    }
+
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(LiveSummary))]
     private string fullName = "Иван Иванов";
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(LiveSummary))]
-    private string feedback = "Запрос подтверждён";
+    private string feedback = "Запрос подтвержден";
 
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(LiveSummary))]
@@ -20,5 +26,16 @@ public partial class TwoWayBindingViewModel : ObservableObject
     [NotifyPropertyChangedFor(nameof(LiveSummary))]
     private bool pushEnabled = true;
 
-    public string LiveSummary => $"{FullName} | Бюджет: {Budget:F0} ₽ | Push: {(PushEnabled ? "включены" : "выключены")} | {Feedback}";
+    public string LiveSummary =>
+        string.Format(
+            T("TwoWay_LiveSummary"),
+            FullName,
+            Budget,
+            T(PushEnabled ? "Common_Enabled" : "Common_Disabled"),
+            Feedback);
+
+    protected override void OnLanguageChanged()
+    {
+        OnPropertyChanged(nameof(LiveSummary));
+    }
 }

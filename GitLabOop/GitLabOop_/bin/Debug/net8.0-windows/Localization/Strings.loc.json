@@ -1,0 +1,402 @@
+﻿{
+    "LanguageName":  {
+                         "ru":  "Русский",
+                         "en":  "English"
+                     },
+    "Common_Disabled":  {
+                            "ru":  "выключено",
+                            "en":  "disabled"
+                        },
+    "Common_Enabled":  {
+                           "ru":  "включено",
+                           "en":  "enabled"
+                       },
+    "Common_No":  {
+                      "ru":  "Нет",
+                      "en":  "No"
+                  },
+    "Common_Yes":  {
+                       "ru":  "Да",
+                       "en":  "Yes"
+                   },
+    "Default_AccentOpacityLabel":  {
+                                       "ru":  "Прозрачность акцента",
+                                       "en":  "Accent opacity"
+                                   },
+    "Default_BlockNameLabel":  {
+                                   "ru":  "Название блока",
+                                   "en":  "Block name"
+                               },
+    "Default_Description":  {
+                                "ru":  "Если Mode не указан, WPF выбирает стандартное поведение целевого свойства.",
+                                "en":  "If Mode is not specified, WPF uses the default behavior of the target property."
+                            },
+    "Default_DescriptionLabel":  {
+                                     "ru":  "Описание",
+                                     "en":  "Description"
+                                 },
+    "Default_DirectCardDescription":  {
+                                          "ru":  "TextBox получает двусторонний режим по умолчанию, а TextBlock и ProgressBar только читают значение Slider.",
+                                          "en":  "TextBox gets two-way behavior by default, while TextBlock and ProgressBar only read the Slider value."
+                                      },
+    "Default_DirectCardTitle":  {
+                                    "ru":  "Прямая привязка к элементам",
+                                    "en":  "Direct binding to controls"
+                                },
+    "Default_Header":  {
+                           "ru":  "Как работает режим Default",
+                           "en":  "How the Default mode works"
+                       },
+    "Default_PinCard":  {
+                            "ru":  "Закрепить карточку",
+                            "en":  "Pin the card"
+                        },
+    "Default_ProgressLabel":  {
+                                  "ru":  "ProgressBar читает то же значение",
+                                  "en":  "ProgressBar reads the same value"
+                              },
+    "Default_SourceLabel":  {
+                                "ru":  "Источник: Slider.Value",
+                                "en":  "Source: Slider.Value"
+                            },
+    "Default_Summary":  {
+                            "ru":  "{0} | Прозрачность акцента: {1:F0}% | Закреплено: {2}",
+                            "en":  "{0} | Accent opacity: {1:F0}% | Pinned: {2}"
+                        },
+    "Default_TextBlockLabel":  {
+                                   "ru":  "TextBlock без явного Mode",
+                                   "en":  "TextBlock without explicit Mode"
+                               },
+    "Default_TextBoxLabel":  {
+                                 "ru":  "TextBox без явного Mode",
+                                 "en":  "TextBox without explicit Mode"
+                             },
+    "Default_ViewModelCardDescription":  {
+                                             "ru":  "Здесь элементы взаимодействуют через свойства ViewModel, а не напрямую друг с другом.",
+                                             "en":  "Here the controls interact through ViewModel properties instead of directly with each other."
+                                         },
+    "Default_ViewModelCardTitle":  {
+                                       "ru":  "Привязка через ViewModel",
+                                       "en":  "Binding through ViewModel"
+                                   },
+    "MainWindow_ApproachLabel":  {
+                                     "ru":  "Подход",
+                                     "en":  "Approach"
+                                 },
+    "MainWindow_ApproachValue":  {
+                                     "ru":  "Библиотека CodingSeb.Localization.WPF",
+                                     "en":  "CodingSeb.Localization.WPF library"
+                                 },
+    "MainWindow_CurrentLanguage":  {
+                                       "ru":  "Текущий язык: {0}",
+                                       "en":  "Current language: {0}"
+                                   },
+    "MainWindow_HeroSubtitle":  {
+                                    "ru":  "Приложение из ЛР1 теперь поддерживает динамическое переключение русского и английского языков без перезапуска.",
+                                    "en":  "The Lab 1 application now supports dynamic switching between Russian and English without restarting."
+                                },
+    "MainWindow_HeroTitle":  {
+                                 "ru":  "Лабораторная работа №2",
+                                 "en":  "Laboratory Work No. 2"
+                             },
+    "MainWindow_LanguageLabel":  {
+                                     "ru":  "Язык интерфейса",
+                                     "en":  "Interface language"
+                                 },
+    "MainWindow_ShowMessage":  {
+                                   "ru":  "Показать сообщение",
+                                   "en":  "Show message"
+                               },
+    "MainWindow_Tab_Default":  {
+                                   "ru":  "Привязка по умолчанию",
+                                   "en":  "Default binding"
+                               },
+    "MainWindow_Tab_OneTime":  {
+                                   "ru":  "Одноразовая привязка",
+                                   "en":  "One-time binding"
+                               },
+    "MainWindow_Tab_OneWay":  {
+                                  "ru":  "Односторонние режимы",
+                                  "en":  "One-way modes"
+                              },
+    "MainWindow_Tab_Triggers":  {
+                                    "ru":  "Триггеры",
+                                    "en":  "Triggers"
+                                },
+    "MainWindow_Tab_TwoWay":  {
+                                  "ru":  "Двухсторонняя привязка",
+                                  "en":  "Two-way binding"
+                              },
+    "MainWindow_Title":  {
+                             "ru":  "ЛР 2. Локализация приложения ЛР1",
+                             "en":  "Lab 2. Localization for the Lab 1 application"
+                         },
+    "MessageBox_Body":  {
+                            "ru":  "Сейчас интерфейс работает на языке: {0}. Перевод переключился без перезапуска приложения.",
+                            "en":  "The interface is currently shown in: {0}. The translation changed without restarting the application."
+                        },
+    "MessageBox_Title":  {
+                             "ru":  "Проверка локализации",
+                             "en":  "Localization check"
+                         },
+    "OneTime_Description":  {
+                                "ru":  "OneTime берет данные только один раз в момент создания привязки или смены источника.",
+                                "en":  "OneTime reads the source only once when the binding or source is created."
+                            },
+    "OneTime_DirectCardDescription":  {
+                                          "ru":  "Целевой элемент запоминает исходное значение и не обновляется автоматически.",
+                                          "en":  "The target control remembers the initial value and does not refresh automatically."
+                                      },
+    "OneTime_DirectCardTitle":  {
+                                    "ru":  "Прямая OneTime-привязка",
+                                    "en":  "Direct OneTime binding"
+                                },
+    "OneTime_DraftCommentLabel":  {
+                                      "ru":  "Черновой комментарий",
+                                      "en":  "Draft comment"
+                                  },
+    "OneTime_DraftTitleLabel":  {
+                                    "ru":  "Черновой заголовок",
+                                    "en":  "Draft title"
+                                },
+    "OneTime_Header":  {
+                           "ru":  "Как работает OneTime",
+                           "en":  "How OneTime works"
+                       },
+    "OneTime_ProgressLabel":  {
+                                  "ru":  "Прогресс",
+                                  "en":  "Progress"
+                              },
+    "OneTime_RefreshButton":  {
+                                  "ru":  "Обновить снимок",
+                                  "en":  "Refresh snapshot"
+                              },
+    "OneTime_SnapshotHeader":  {
+                                   "ru":  "Снимок OneTime",
+                                   "en":  "OneTime snapshot"
+                               },
+    "OneTime_SnapshotViewModelHeader":  {
+                                            "ru":  "Снимок ViewModel",
+                                            "en":  "ViewModel snapshot"
+                                        },
+    "OneTime_SourceSliderLabel":  {
+                                      "ru":  "Источник: Slider",
+                                      "en":  "Source: Slider"
+                                  },
+    "OneTime_SourceTextLabel":  {
+                                    "ru":  "Источник: TextBox",
+                                    "en":  "Source: TextBox"
+                                },
+    "OneTime_ViewModelCardDescription":  {
+                                             "ru":  "Карточка обновляется только после пересоздания снимка командой.",
+                                             "en":  "The card refreshes only after the snapshot is recreated by a command."
+                                         },
+    "OneTime_ViewModelCardTitle":  {
+                                       "ru":  "OneTime через ViewModel",
+                                       "en":  "OneTime through ViewModel"
+                                   },
+    "OneWay_AdvanceButton":  {
+                                 "ru":  "Изменить телеметрию",
+                                 "en":  "Change telemetry"
+                             },
+    "OneWay_Description":  {
+                               "ru":  "OneWay обновляет только цель из источника, а OneWayToSource отправляет изменения в обратную сторону.",
+                               "en":  "OneWay updates only the target from the source, while OneWayToSource sends changes in the opposite direction."
+                           },
+    "OneWay_DirectCardDescription":  {
+                                         "ru":  "Слева элементы связаны напрямую без участия ViewModel.",
+                                         "en":  "The controls on the left are connected directly without a ViewModel."
+                                     },
+    "OneWay_DirectCardTitle":  {
+                                   "ru":  "Прямые OneWay и OneWayToSource",
+                                   "en":  "Direct OneWay and OneWayToSource"
+                               },
+    "OneWay_Header":  {
+                          "ru":  "Как работают OneWay и OneWayToSource",
+                          "en":  "How OneWay and OneWayToSource work"
+                      },
+    "OneWay_LevelCaption":  {
+                                "ru":  "Текущее значение потока: {0:F0}%",
+                                "en":  "Current flow value: {0:F0}%"
+                            },
+    "OneWay_OneWayToSourceHeader":  {
+                                        "ru":  "OneWayToSource в ViewModel",
+                                        "en":  "OneWayToSource in ViewModel"
+                                    },
+    "OneWay_SourceLabel":  {
+                               "ru":  "Источник для OneWay",
+                               "en":  "Source for OneWay"
+                           },
+    "OneWay_SyncCheckbox":  {
+                                "ru":  "Синхронизация активна",
+                                "en":  "Synchronization is active"
+                            },
+    "OneWay_SystemMessageHigh":  {
+                                     "ru":  "Высокая загрузка. UI обновляется от источника, но не пишет обратно.",
+                                     "en":  "High load. The UI updates from the source but does not write back."
+                                 },
+    "OneWay_SystemMessageLow":  {
+                                    "ru":  "Низкая загрузка. Интерфейс работает в спокойном режиме.",
+                                    "en":  "Low load. The interface is working in a calm mode."
+                                },
+    "OneWay_SystemMessageMedium":  {
+                                       "ru":  "Средняя загрузка. Значения приходят только из модели.",
+                                       "en":  "Medium load. Values arrive only from the model."
+                                   },
+    "OneWay_ToSourceHeader":  {
+                                  "ru":  "TextBox пишет в Border.Tag через OneWayToSource",
+                                  "en":  "TextBox writes to Border.Tag through OneWayToSource"
+                              },
+    "OneWay_ViewModelCardDescription":  {
+                                            "ru":  "Кнопка меняет источник в ViewModel, а элементы только отображают его состояние.",
+                                            "en":  "The button changes the source in the ViewModel, and the controls only display its state."
+                                        },
+    "OneWay_ViewModelCardTitle":  {
+                                      "ru":  "Односторонние режимы через ViewModel",
+                                      "en":  "One-way modes through ViewModel"
+                                  },
+    "Triggers_CombinedState":  {
+                                   "ru":  "Комбинированное состояние",
+                                   "en":  "Combined state"
+                               },
+    "Triggers_CurrentState":  {
+                                  "ru":  "Online: {0} | Priority: {1} | Warnings: {2}",
+                                  "en":  "Online: {0} | Priority: {1} | Warnings: {2}"
+                              },
+    "Triggers_DataTriggerDescription":  {
+                                            "ru":  "DataTrigger меняет оформление по значению свойства во ViewModel.",
+                                            "en":  "A DataTrigger changes styling based on a ViewModel property value."
+                                        },
+    "Triggers_DataTriggerTitle":  {
+                                      "ru":  "DataTrigger",
+                                      "en":  "DataTrigger"
+                                  },
+    "Triggers_Description":  {
+                                 "ru":  "Триггеры меняют внешний вид и поведение элементов без code-behind.",
+                                 "en":  "Triggers change the appearance and behavior of controls without code-behind."
+                             },
+    "Triggers_Header":  {
+                            "ru":  "Разница между триггерами",
+                            "en":  "Difference between triggers"
+                        },
+    "Triggers_HoverAndPressButton":  {
+                                         "ru":  "Наведи и нажми",
+                                         "en":  "Hover and press"
+                                     },
+    "Triggers_HoverPressButton":  {
+                                      "ru":  "Наведи и нажми",
+                                      "en":  "Hover and press"
+                                  },
+    "Triggers_MultiDataDescription":  {
+                                          "ru":  "MultiDataTrigger реагирует на набор условий, а EventTrigger запускает анимацию.",
+                                          "en":  "A MultiDataTrigger reacts to several conditions, while EventTrigger starts an animation."
+                                      },
+    "Triggers_MultiDataTitle":  {
+                                    "ru":  "MultiDataTrigger и EventTrigger",
+                                    "en":  "MultiDataTrigger and EventTrigger"
+                                },
+    "Triggers_MultiTriggerDescription":  {
+                                             "ru":  "MultiTrigger учитывает сразу несколько свойств элемента.",
+                                             "en":  "A MultiTrigger checks several properties of the same control."
+                                         },
+    "Triggers_MultiTriggerTitle":  {
+                                       "ru":  "MultiTrigger",
+                                       "en":  "MultiTrigger"
+                                   },
+    "Triggers_PriorityState":  {
+                                   "ru":  "Режим приоритета",
+                                   "en":  "Priority mode"
+                               },
+    "Triggers_Reset":  {
+                           "ru":  "Сброс",
+                           "en":  "Reset"
+                       },
+    "Triggers_ToggleOnline":  {
+                                  "ru":  "Переключить Online",
+                                  "en":  "Toggle Online"
+                              },
+    "Triggers_TogglePriority":  {
+                                    "ru":  "Переключить Priority",
+                                    "en":  "Toggle Priority"
+                                },
+    "Triggers_ToggleWarnings":  {
+                                    "ru":  "Переключить Warnings",
+                                    "en":  "Toggle Warnings"
+                                },
+    "Triggers_TriggerDescription":  {
+                                        "ru":  "Обычный Trigger следит за состоянием самого элемента.",
+                                        "en":  "A regular Trigger watches the state of the control itself."
+                                    },
+    "Triggers_TriggerTitle":  {
+                                  "ru":  "Trigger",
+                                  "en":  "Trigger"
+                              },
+    "TwoWay_BudgetLabel":  {
+                               "ru":  "Бюджет",
+                               "en":  "Budget"
+                           },
+    "TwoWay_CheckboxContent":  {
+                                   "ru":  "Флаг отправки включен",
+                                   "en":  "Send flag is enabled"
+                               },
+    "TwoWay_Description":  {
+                               "ru":  "При двухсторонней привязке элемент не только получает данные, но и отправляет изменения обратно.",
+                               "en":  "With two-way binding the target control both receives data and sends changes back."
+                           },
+    "TwoWay_DirectCardDescription":  {
+                                         "ru":  "Элементы синхронизируются напрямую через ElementName и явный Mode=TwoWay.",
+                                         "en":  "The controls stay synchronized through ElementName and explicit Mode=TwoWay."
+                                     },
+    "TwoWay_DirectCardTitle":  {
+                                   "ru":  "Прямая TwoWay-привязка",
+                                   "en":  "Direct TwoWay binding"
+                               },
+    "TwoWay_EditSourceLabel":  {
+                                   "ru":  "Редактирование того же источника",
+                                   "en":  "Editing the same source"
+                               },
+    "TwoWay_FeedbackLabel":  {
+                                 "ru":  "Комментарий",
+                                 "en":  "Comment"
+                             },
+    "TwoWay_FullNameLabel":  {
+                                 "ru":  "ФИО",
+                                 "en":  "Full name"
+                             },
+    "TwoWay_Header":  {
+                          "ru":  "Как работает TwoWay",
+                          "en":  "How TwoWay works"
+                      },
+    "TwoWay_LiveSummary":  {
+                               "ru":  "{0} | Бюджет: {1:F0} ₽ | Push: {2} | {3}",
+                               "en":  "{0} | Budget: {1:F0} ₽ | Push: {2} | {3}"
+                           },
+    "TwoWay_MainTextLabel":  {
+                                 "ru":  "Основной текст",
+                                 "en":  "Main text"
+                             },
+    "TwoWay_MirrorTextLabel":  {
+                                   "ru":  "Зеркальный TextBox",
+                                   "en":  "Mirrored TextBox"
+                               },
+    "TwoWay_PushCheckbox":  {
+                                "ru":  "Включить push-уведомления",
+                                "en":  "Enable push notifications"
+                            },
+    "TwoWay_SliderSourceLabel":  {
+                                     "ru":  "Источник: Slider",
+                                     "en":  "Source: Slider"
+                                 },
+    "TwoWay_ToggleContent":  {
+                                 "ru":  "Повторяет состояние CheckBox",
+                                 "en":  "Repeats the CheckBox state"
+                             },
+    "TwoWay_ViewModelCardDescription":  {
+                                            "ru":  "Все элементы читают и изменяют одни и те же свойства ViewModel.",
+                                            "en":  "All controls read and update the same ViewModel properties."
+                                        },
+    "TwoWay_ViewModelCardTitle":  {
+                                      "ru":  "TwoWay через ViewModel",
+                                      "en":  "TwoWay through ViewModel"
+                                  }
+}

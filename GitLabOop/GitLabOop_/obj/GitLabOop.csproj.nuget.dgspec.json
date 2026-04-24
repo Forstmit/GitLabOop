@@ -50,6 +50,18 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "dependencies": {
+            "CodingSeb.Localization": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "CodingSeb.Localization.JsonFileLoader": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "CodingSeb.Localization.WPF": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
             "CommunityToolkit.Mvvm": {
               "target": "Package",
               "version": "[8.4.0, )"
