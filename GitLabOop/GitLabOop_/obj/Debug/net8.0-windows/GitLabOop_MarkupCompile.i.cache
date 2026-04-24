@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\maksi\OneDrive\Документы\GitHub\GitLabOop\GitLabOop\GitLabOop_\App.xaml
-8-738589145
+10-1701691492
 
-19129959621
+231829287170
 199-1724190585
-MainWindow.xaml;Resources\Theme.xaml;Rsources\Theme.xaml;Views\DefaultBindingView.xaml;Views\OneTimeBindingView.xaml;Views\OneWayBindingsView.xaml;Views\TriggersView.xaml;Views\TwoWayBindingView.xaml;
+MainWindow.xaml;Resources\Localization\Strings.en.xaml;Resources\Localization\Strings.ru.xaml;Resources\Theme.xaml;Rsources\Theme.xaml;Views\DefaultBindingView.xaml;Views\OneTimeBindingView.xaml;Views\OneWayBindingsView.xaml;Views\TriggersView.xaml;Views\TwoWayBindingView.xaml;
 
-False
+True
 
